@@ -1,0 +1,16 @@
+﻿[
+  {
+    "batch": "K05",
+    "earlyBirdDeadline": "2026-08-10T23:59:59+07:00",
+    "earlyBirdDate": "10/08",
+    "day1Date": "21/08/2026",
+    "day1DateShort": "21/8",
+    "day1Time": "19h-21h",
+    "day2Date": "22/08/2026",
+    "day2DateShort": "22/8",
+    "day2Time": "13h-17h",
+    "day3Date": "29/08/2026",
+    "day3DateShort": "29/8",
+    "day3Time": "09h-12h"
+  }
+]

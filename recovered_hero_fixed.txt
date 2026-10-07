@@ -1,0 +1,30 @@
+<section id="hero">
+    <div class="aurora-container">
+      <div class="aurora-layer aurora-1"></div>
+      <div class="aurora-layer aurora-2"></div>
+      <div class="aurora-layer aurora-3"></div>
+    </div>
+    <div class="container">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        BOOTCAMP THỰC CHIẾN
+      </div>
+
+      <h1>
+        Social To Sale Bootcamp:
+      </h1>
+      <p class="gold-shimmer" style="font-family:'EB Garamond', serif; letter-spacing:0.02em; font-size: clamp(1.2rem, 3.5vw, 1.6rem); margin: 12px auto 28px; line-height: 1.5; max-width: 600px; font-weight: 500;">
+        Xây Dựng Hệ Thống Biến Người Xem Thành Người Mua
+      </p>
+
+      <div class="camket-box" style="margin:0 auto 28px; max-width:560px;">
+        <div class="camket-box-inner">
+          <p style="font-family:'Beautique Display',serif; font-size:1.15rem; font-weight:700; color:#fff; line-height:1.6; margin:0; letter-spacing:0.02em;">
+            Lớp Chỉ <span style="color:var(--gold);">5 Học Viên</span> — Cam Kết Có Landing Page<br/>Chạy Được Thật Chỉ Sau <span style="color:var(--gold);">2 Ngày</span>
+          </p>
+        </div>
+      </div>
+
+      <p class="hero-tagline" id="hero-dates">Online 27/6 · Offline 28/6 · TP.HCM</p>
+    </div>
+  </section>

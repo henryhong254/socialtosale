@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshop: Tự Xây Trang Bán Hàng Bằng AI – Founder's North</title>
+  <meta name="description" content="Workshop 2 ngày giúp Founder SME/Startup tự tay xây Landing Page bằng AI. Không cần biết code. Cam kết ra về có trang đã launching. Early Bird 886.000đ." />
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://workshop.foundersnorth.com.vn/" />
+  <meta property="og:title" content="Workshop: Tự Xây Trang Bán Hàng Bằng AI – Founder's North" />
+  <meta property="og:description" content="Workshop 2 ngày giúp Founder SME/Startup tự tay xây Landing Page bằng AI. Không cần biết code. Cam kết ra về có trang đã launching. Early Bird 886.000đ." />
+  <meta property="og:image" content="https://workshop.foundersnorth.com.vn/Assets/lpkt.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://workshop.foundersnorth.com.vn/Assets/lpkt.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'Beautique Display';
+      src: url('Fonts/BeautiqueDisplay-Black copy.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    /* ═══════════════════════════════════════════
+       ROOT & RESET
+    ═══════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --gold:       #C9A84C;
+      --gold-light: #F0CC74;
+      --gold-dim:   #7A5F25;
+      --parchment:  #F5ECD7;
+      --ink:        #1A1209;
+      --navy:       #0D0F1A;
+      --navy-mid:   #12152B;
+      --navy-card:  #161933;
+      --emerald:    #1A3D2F;
+      --emerald-glow: #2ECC71;
+      --crimson:    #8B1A1A;
+      --silver:     #C0C8D8;
+      --radius:     12px;
+      --radius-lg:  20px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;

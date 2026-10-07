@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>ASSP Dream Buyer Avatar — Social To Sale</title>
+<style>
+  :root {
+    --color-background-primary: #ffffff;
+    --color-background-secondary: #f7f7f5;
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #55554f;
+    --color-border: #e3e2dc;
+    --green: #1D9E75;
+    --orange: #EF9F27;
+    --red: #E24B4A;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--color-background-secondary);
+    color: var(--color-text-primary);
+    padding: 24px 12px 60px;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; }
+  .header {
+    background: var(--color-background-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .header h1 { font-size: 20px; margin: 0 0 4px; }
+  .header p { color: var(--color-text-secondary); margin: 0; font-size: 13px; }
+
+  .source-box {
+    background: var(--color-background-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .source-box div { margin-bottom: 4px; }
+
+  .card {
+    background: var(--color-background-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 18px;
+  }
+  .card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-secondary);
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card h2::before { content: "▸"; color: var(--green); }
+
+  .persona-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .persona-grid .label { color: var(--color-text-secondary); font-size: 12px; }
+  .persona-desc {
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.6;
+    border-left: 3px solid var(--green);
+    padding-left: 12px;
+    margin-top: 10px;
+  }
+
+  ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 14px; }
+  li { margin-bottom: 4px; }
+
+  .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .pill {
+    background: var(--color-background-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 12.5px;
+  }
+
+  .border-strong { border-left: 3px solid var(--green); padding-left: 14px; }
+  .border-attention { border-left: 3px solid var(--orange); padding-left: 14px; }
+  .border-none { border-left: 3px solid var(--red); padding-left: 14px; }
+
+  .quote-list { list-style: none; padding: 0; }
+  .quote-list li {
+    background: var(--color-background-secondary);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    font-style: italic;
+  }
+
+  .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .ba-col h3 { font-size: 12.5px; text-transform: uppercase; margin: 0 0 8px; color: var(--color-text-secondary); }
+  .ba-col.before { border-left: 3px solid var(--red); padding-left: 14px; }
+  .ba-col.after { border-left: 3px solid var(--green); padding-left: 14px; }
+
+  .objection {
+    border-left: 3px solid var(--orange);
+    padding: 4px 0 4px 14px;
+    margin-bottom: 14px;
+  }
+  .objection .q { font-weight: 600; font-size: 14px; margin-bottom: 3px; }
+  .objection .root { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 3px; }
+  .objection .fix { font-size: 13px; }
+  .objection .fix b { color: var(--green); }
+
+  .top-objection {
+    background: #FFF7EC;
+    border: 1px solid var(--orange);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .hook {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    border-left: 3px solid var(--green);
+    padding-left: 14px;
+  }
+
+  .summary {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .btn-row { display: flex; gap: 10px; margin-top: 20px; }
+  button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+    background: var(--color-background-primary);
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--color-text-primary);
+  }
+  button.primary { background: var(--green); color: white; border: none; }
+  button:active { opacity: 0.8; }
+  .toast {
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--green);
+    margin-top: 8px;
+    height: 16px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <h1>ASSP DREAM BUYER AVATAR</h1>
+    <p>Social To Sale — Founders North · Được thiết kế bởi ASSP Framework</p>
+  </div>
+
+  <div class="source-box">
+    <div>✅ <b>Data thật:</b> toàn bộ câu trả lời của Henry qua quy trình 9 câu hỏi (khách hàng thật, không phải giả định)</div>
+    <div>🔍 <b>AI Research:</b> đối thủ Mayashare, MIV (Thảo Trần), "Landing Page That Sells" (Võ Hoàng Ân), Run by Linh, bối cảnh Solo-Expert tại Việt Nam</div>
+    <div>⚠️ <b>Giả định — cần validate:</b> tên nhân vật, độ tuổi chính xác, mức thu nhập, tình trạng gia đình (chưa có data thật)</div>
+  </div>
+
+  <div class="card">
+    <h2>Nhân vật avatar</h2>
+    <div class="persona-grid">
+      <div><span class="label">Tên (giả định)</span><br>Diệu Anh</div>
+      <div><span class="label">Tuổi (giả định)</span><br>30–38</div>
+      <div><span class="label">Nghề</span><br>Coach / chuyên gia tri thức — Solo-Expert, thường vẫn giữ 1 công việc full-time song song</div>
+      <div><span class="label">Thu nhập (giả định)</span><br>Chưa xác định — đủ để đầu tư khóa học vài triệu đồng</div>
+      <div><span class="label">Gia đình</span><br>Chưa có data</div>
+      <div><span class="label">Địa lý</span><br>TP.HCM và các tỉnh thành lớn (workshop có offline tại HCMC, có bản online)</div>
+    </div>
+    <div class="persona-desc">
+      Đã xây kênh social hơn 1 năm, có sản phẩm/dịch vụ riêng và đã từng bán được — nhưng khách hàng đến thất thường, tháng nhiều tháng ít, và đang loay hoay giữa hàng tá lời khuyên marketing trái chiều mà không biết tin ai.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Họ tụ tập ở đâu — kênh tiếp cận</h2>
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 6px;">Nơi tụ tập online:</p>
+    <div class="pill-row">
+      <span class="pill">Group của Trần Tiến Công</span>
+      <span class="pill">Group của Ruby</span>
+      <span class="pill">Group "caocaogram" — Thảo Trần</span>
+      <span class="pill">Group AI cho kinh doanh / hiệu suất</span>
+    </div>
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:14px 0 6px;">Follow & tin tưởng:</p>
+    <div class="pill-row">
+      <span class="pill">Thảo Trần (MIV / caocaogram)</span>
+      <span class="pill">Mayashare</span>
+      <span class="pill">Linh Phan — khái niệm "Solo-Expert"</span>
+    </div>
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:14px 0 6px;">Kênh giao tiếp ưa thích: <b>Facebook Messenger (inbox)</b></p>
+    <div class="border-strong" style="margin-top:12px;font-size:13.5px;">
+      → ỨNG DỤNG: ưu tiên nội dung/outreach trên Facebook cá nhân + các group Solo-Expert kể trên, dẫn về Messenger để tư vấn/chốt, không phải email.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Vấn đề họ đang gặp và đã thử gì</h2>
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 6px;">Đang stuck:</p>
+    <ul>
+      <li>Doanh thu/khách hàng không đều — tháng nhiều, tháng ít</li>
+      <li>Có content, có follower, nhưng không chắc đang bán đúng người hay không</li>
+      <li>Nhận quá nhiều lời khuyên trái chiều, quá tải thông tin, không biết tin ai</li>
+      <li>Không đo lường được ai thật sự quan tâm sản phẩm — "đăng bài và cầu nguyện"</li>
+    </ul>
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:14px 0 6px;">Đã thử nhưng thất vọng:</p>
+    <ul>
+      <li>Thuê dịch vụ landing page/website ngoài — vì giá quá cao</li>
+      <li>Tự làm landing page — vì không hiệu quả</li>
+      <li>Mua khóa học online quay sẵn — vì thiếu động lực, bỏ dở giữa chừng</li>
+      <li>Học khóa của Mayashare — vì không ra kết quả</li>
+    </ul>
+    <div class="border-attention" style="margin-top:12px;font-size:13.5px;">
+      Cảm xúc dominant: <b>Fear</b> (sợ lặp lại thất bại cũ) xen lẫn <b>Hope</b> (tin có cách làm đúng nếu tìm được đúng hệ thống)
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Họ đang mơ ước điều gì</h2>
+    <ul>
+      <li><b>Dream outcome cụ thể:</b> có khách hàng hỏi mua đều đặn hơn, đo lường được ai thật sự quan tâm sản phẩm</li>
+      <li><b>Cảm xúc muốn cảm nhận:</b> tự tin, rõ ràng, không còn mông lung vô định</li>
+      <li><b>Danh tính mới muốn có:</b> một Solo-Expert làm marketing có chủ đích — biết mỗi hành động đang dẫn tới đâu, không phải "đăng bài và cầu nguyện"</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Nỗi sợ thật sự bên trong</h2>
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 8px;">Thật sự bên dưới:</p>
+    <ul>
+      <li>Sợ lặp lại thất bại cũ — mua rồi bỏ dở như những lần trước</li>
+      <li>Sợ tốn tiền mà vẫn không tự làm được, phải học mãi không xong</li>
+      <li>Sợ không tìm được người thuê ngoài đủ tâm huyết, hiểu sản phẩm, giá hợp lý</li>
+      <li>Sợ không biết đến khi nào mới có kết quả</li>
+      <li>Sợ không ai quan tâm đến Social của mình, hoặc đang nhắm sai khách hàng mục tiêu</li>
+      <li>Sợ doanh thu mãi bấp bênh, không dự đoán được</li>
+    </ul>
+    <div class="border-none" style="margin-top:10px;font-size:13.5px;">
+      Sâu nhất không nói với ai: có thể mình không có "gu" marketing, và mọi lời khuyên trái chiều đang nghe được chỉ càng chứng minh điều đó.
+    </div>
+    <div class="border-strong" style="margin-top:12px;font-size:13.5px;">
+      → DÙNG TRONG COPY: "Tôi biết bạn đã từng mua một khóa rồi bỏ dở, đã từng nghe cả chục lời khuyên khác nhau mà vẫn không chắc nên tin ai..." — gọi tên nỗi sợ TRƯỚC khi giới thiệu hệ thống.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Hướng đến niềm vui — không chỉ tránh xa nỗi đau</h2>
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 8px;">Điều họ thật sự khao khát tiến tới (approach), song song với những nỗi sợ muốn tránh xa (avoidance) ở phần trên:</p>
+    <ul>
+      <li>Gia đình nhìn nhận đây là một nghề thật sự, không phải "làm chơi"</li>
+      <li>Được tập trung vào công việc mình yêu thích mà vẫn kiếm ra tiền</li>
+      <li>Được công nhận là chuyên gia thật sự trong ngách — có vị thế khi nói chuyện với khách hàng, được tôn trọng</li>
+      <li>Khách hàng chủ động tìm đến hỏi mua, thay vì phải chạy theo mời chào</li>
+      <li>Thu nhập đủ ổn định để cảm thấy an toàn, toàn tâm toàn ý theo đuổi sự nghiệp vì đam mê và mong muốn thay đổi khách hàng — không phải vì cơm áo gạo tiền</li>
+      <li>Mỗi lời họ nói ra được khách hàng xem là "lời vàng lời ngọc"</li>
+      <li>Có một cộng đồng những người yêu mến và tin tưởng vào năng lực của mình</li>
+    </ul>
+    <div class="border-strong" style="margin-top:12px;font-size:13.5px;">
+      → DÙNG TRONG COPY: sau khi gọi tên nỗi sợ, vẽ tiếp viễn cảnh — "...và tưởng tượng ngày gia đình bạn nhìn công việc này là một nghề thật sự, ngày khách hàng chủ động nhắn hỏi mua thay vì bạn phải chạy theo mời chào." Đẩy (nỗi sợ) rồi hút (khao khát) — không chỉ dừng ở đẩy.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Cuộc sống trước và sau khi mua</h2>
+    <div class="ba-grid">
+      <div class="ba-col before">
+        <h3>Before</h3>
+        <p style="font-size:13.5px;line-height:1.7;">
+          <b>Have:</b> sản phẩm/dịch vụ đã bán được nhưng chưa hệ thống hóa<br>
+          <b>Feel:</b> mông lung, quá tải lời khuyên — thấp thỏm mỗi khi nghĩ đến tháng ít khách<br>
+          <b>Average day:</b> vừa làm full-time, vừa tự mày mò marketing sau giờ làm, tự hỏi liệu có nên rẽ hẳn sang nghề này không<br>
+          <b>Status:</b> gia đình xem đây là "làm thêm", chưa ai trong ngành gọi là chuyên nghiệp; phải chủ động mời chào mới có khách
+        </p>
+      </div>
+      <div class="ba-col after">
+        <h3>After</h3>
+        <p style="font-size:13.5px;line-height:1.7;">
+          <b>Have:</b> hệ thống Social to Sale hoàn chỉnh + landing page đúng ý — một tài sản của riêng mình, không phụ thuộc ai<br>
+          <b>Feel:</b> tự tin, an toàn đủ để toàn tâm toàn ý theo đuổi vì đam mê, không còn vì cơm áo gạo tiền<br>
+          <b>Average day:</b> biết chính xác hành động nào đang tạo ra khách hàng, có thời gian tập trung vào phần công việc mình yêu thích nhất<br>
+          <b>Status:</b> gia đình nhìn nhận đây là một nghề thật sự; được xem là chuyên gia có vị thế trong ngách; khách hàng chủ động nhắn hỏi mua thay vì phải mời chào; có một cộng đồng người yêu mến và tin vào năng lực của mình
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Một ngày bình thường của họ</h2>
+    <ul>
+      <li>Viết bài, thiết kế hình, quay video đăng Facebook cá nhân</li>
+      <li>Tham gia học (vd: khóa coaching), gặp gỡ khách hàng</li>
+      <li>Nhiều người vẫn duy trì 1 công việc full-time song song</li>
+      <li>Lướt điện thoại nhiều — đặc biệt trong lúc làm marketing và mọi lúc rảnh rỗi</li>
+    </ul>
+    <div class="border-strong" style="margin-top:10px;font-size:13.5px;">
+      → THỜI ĐIỂM VÀNG: các khoảng rảnh rải rác trong ngày (không cố định giờ) — ưu tiên nội dung ngắn, dễ tiêu thụ khi lướt điện thoại tranh thủ.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Điều gì khiến họ vui và kể cho người khác</h2>
+    <ul>
+      <li>Ra được landing page đẹp, đúng ý mình — biến được ý tưởng ấp ủ đã lâu nhưng chưa làm được thành hiện thực</li>
+      <li>Nhận được tin nhắn đầu tiên từ một khách lạ chủ động hỏi mua, không phải do mình mời chào</li>
+      <li>Được người trong gia đình chủ động hỏi thăm hoặc khen về công việc — dấu hiệu họ bắt đầu nhìn nhận đây là một nghề thật sự</li>
+      <li>Được một Solo-Expert khác trong cộng đồng nhắc đến, giới thiệu, hoặc mời chia sẻ kinh nghiệm — cảm giác được đồng nghiệp công nhận, không chỉ khách hàng</li>
+      <li>Một khách hàng nói lại đúng nguyên văn lời khuyên của họ như một điều tâm đắc — cảm giác lời mình nói "có trọng lượng"</li>
+    </ul>
+    <div class="border-strong" style="margin-top:10px;font-size:13.5px;">
+      → ỨNG DỤNG: khuyến khích học viên chia sẻ landing page/ý tưởng "ấp ủ đã lâu" ngay khi hoàn thành, và đặc biệt khuyến khích họ chia sẻ khoảnh khắc "khách lạ chủ động nhắn hỏi mua" — đây là 2 khoảnh khắc tự nhiên nhất để họ khoe và giới thiệu bạn. Xây thêm cơ chế để đồng nghiệp/Solo-Expert khác nhìn thấy thành quả của họ (vd: showcase trong cộng đồng học viên) — chạm đúng khao khát được đồng nghiệp công nhận, không chỉ khách hàng.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Lý do họ chưa chịu mua — Objections List</h2>
+
+    <div class="objection">
+      <div class="q">❓ "Mua rồi lại bỏ dở như mấy lần trước"</div>
+      <div class="root">Gốc rễ thật: không tin vào chính mình để duy trì kỷ luật, không phải không tin sản phẩm</div>
+      <div class="fix">→ Cần address bằng: <b>cam kết đồng hành trực tiếp (offline, bắt buộc thực hành)</b></div>
+    </div>
+
+    <div class="objection">
+      <div class="q">❓ "Tốn tiền mà vẫn không tự làm được"</div>
+      <div class="root">Gốc rễ thật: từng trải nghiệm học lý thuyết suông, không có sản phẩm cầm tay được sau khóa</div>
+      <div class="fix">→ Cần address bằng: <b>cam kết đầu ra cụ thể</b> — có landing page/hệ thống thật sau khóa</div>
+    </div>
+
+    <div class="objection">
+      <div class="q">❓ "Muốn thuê người làm nhưng khó tìm đúng người, đúng giá"</div>
+      <div class="root">Gốc rễ thật: mong muốn ngầm là "outsource hoàn toàn"</div>
+      <div class="fix">→ Cần address bằng: <b>so sánh chi phí/thời gian</b> giữa thuê ngoài vs tự làm với hệ thống</div>
+    </div>
+
+    <div class="objection">
+      <div class="q">❓ "Không biết đến khi nào mới có kết quả"</div>
+      <div class="root">Gốc rễ thật: sợ đầu tư mà không thấy tiến độ ở giữa chừng</div>
+      <div class="fix">→ Cần address bằng: <b>cột mốc đo lường được</b> theo từng giai đoạn</div>
+    </div>
+
+    <div class="objection">
+      <div class="q">❓ "Đã học Mayashare/khóa khác rồi mà không có kết quả"</div>
+      <div class="root">Gốc rễ thật: hoài nghi liệu "phương pháp mới" có thật sự khác</div>
+      <div class="fix">→ Cần address bằng: <b>bằng chứng cụ thể</b> + giải thích rõ điểm khác biệt về cơ chế</div>
+    </div>
+
+    <div class="objection">
+      <div class="q">❓ "Nghe nhiều người nói nhiều kiểu, không biết ai đúng"</div>
+      <div class="root">Gốc rễ thật: thiếu 1 khung tổng thể để đánh giá lời khuyên — thiếu bộ lọc, không thiếu thông tin</div>
+      <div class="fix">→ Cần address bằng: <b>định vị "1 hệ thống duy nhất, đầy đủ trình tự"</b>, không phải thêm 1 tactic rời rạc</div>
+    </div>
+
+    <div class="top-objection">
+      <b>Objection nặng nhất cần address đầu tiên:</b><br>
+      "Mua rồi lại bỏ dở như mấy lần trước" — giải quyết được nỗi sợ này (bằng cam kết đồng hành + thực hành bắt buộc) là chốt được đơn, vì mọi objection khác đều xoay quanh việc sợ đầu tư mà không có kết quả cầm tay được.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Cách nói chuyện với họ để bán hàng</h2>
+    <p class="hook">"Bạn đã có sản phẩm, đã từng bán được hàng — nhưng khách đến thất thường, và bạn đang nghe quá nhiều lời khuyên marketing khác nhau mà không biết tin ai. Bạn không cần thêm một lời khuyên nữa. Bạn cần một hệ thống duy nhất, đủ trình tự, để biến người follow bạn thành khách hàng — dù follow chưa nhiều. Để một ngày, gia đình nhìn công việc này là một nghề thật sự, và khách hàng chủ động tìm đến bạn thay vì bạn phải chạy theo mời chào."</p>
+    <p style="font-size:13.5px;margin-top:14px;"><b>Angle tốt nhất:</b> Pain-driven (doanh thu bấp bênh + quá tải lời khuyên) kết hợp Enemy-framing nhẹ (đối đầu với "tình trạng quá tải thông tin marketing", không đối đầu trực tiếp 1 đối thủ cụ thể)</p>
+    <p style="font-size:13.5px;"><b>Proof point họ tin nhất:</b> case study định lượng thật (bao nhiêu học viên đã ra landing page + có khách hỏi mua), không phải lời hứa lý thuyết</p>
+    <p style="font-size:13.5px;"><b>Kênh nên chạy đầu tiên:</b> nội dung trong/dẫn từ các Facebook Group Solo-Expert (Trần Tiến Công, Ruby, caocaogram) → dẫn về Messenger để tư vấn</p>
+  </div>
+
+  <div class="card">
+    <h2>Tóm tắt chân dung khách hàng</h2>
+    <p class="summary">
+      Đây là một Solo-Expert đã xây kênh social hơn 1 năm, có sản phẩm/dịch vụ riêng và đã từng bán được hàng — nhưng khách đến thất thường, tháng nhiều tháng ít, khiến họ luôn cảm thấy bấp bênh. Họ tụ tập trong các Facebook Group dành cho Solo-Expert (Trần Tiến Công, Ruby, caocaogram của Thảo Trần) và thích liên hệ qua Messenger. Họ đã từng thử thuê ngoài (quá đắt), tự làm (không hiệu quả), mua khóa online (bỏ dở vì thiếu động lực), và học Mayashare (không ra kết quả) — nên nỗi sợ lớn nhất là lặp lại đúng vòng lặp thất bại đó một lần nữa. Điều họ mơ ước không chỉ là "bán được hàng" mà là cảm giác tự tin, biết rõ mỗi hành động marketing đang dẫn tới đâu, thay vì "đăng bài và cầu nguyện" giữa hàng tá lời khuyên trái chiều đang nghe mỗi ngày. Thời điểm tốt nhất để tiếp cận họ là bất kỳ lúc nào họ rảnh rỗi lướt điện thoại trong ngày — không phải một khung giờ cố định — nên nội dung cần ngắn, dễ tiêu thụ ngay lập tức.
+    </p>
+  </div>
+
+  <div class="btn-row">
+    <button id="copyBtn">📋 Copy avatar.md</button>
+    <button id="downloadBtn" class="primary">⬇ Download avatar.md</button>
+  </div>
+  <div class="toast" id="toast"></div>
+
+</div>
+
+<script>
+const mdContent = `# ASSP DREAM BUYER AVATAR — Social To Sale (Founders North)
+
+## Nguồn data
+- Data thật: toàn bộ câu trả lời của Henry qua quy trình 9 câu hỏi
+- AI Research: Mayashare, MIV (Thảo Trần), "Landing Page That Sells" (Võ Hoàng Ân), Run by Linh, bối cảnh Solo-Expert Việt Nam
+- Giả định cần validate: tên, tuổi chính xác, thu nhập, tình trạng gia đình
+
+## Nhân vật avatar
+Tên (giả định): Diệu Anh | Tuổi (giả định): 30-38
+Nghề: Coach/chuyên gia tri thức - Solo-Expert, thường có 1 công việc full-time song song
+Địa lý: TP.HCM và các tỉnh thành lớn
+Mô tả: Đã xây kênh social >1 năm, có sản phẩm/dịch vụ và đã từng bán được, nhưng khách hàng đến thất thường, đang loay hoay giữa hàng tá lời khuyên marketing trái chiều.
+
+## Họ tụ tập ở đâu
+Online: Group Trần Tiến Công, Group Ruby, Group "caocaogram" (Thảo Trần), Group AI cho kinh doanh
+Follow & tin tưởng: Thảo Trần (MIV/caocaogram), Mayashare, Linh Phan (khái niệm Solo-Expert)
+Kênh giao tiếp ưa thích: Facebook Messenger
+
+## Vấn đề đang gặp và đã thử gì
+Đang stuck: doanh thu không đều, không chắc bán đúng người, quá tải lời khuyên trái chiều, không đo lường được ai quan tâm thật sự
+Đã thử nhưng thất vọng: thuê dịch vụ ngoài (giá cao), tự làm (không hiệu quả), mua khóa quay sẵn (bỏ dở), học Mayashare (không kết quả)
+Cảm xúc dominant: Fear xen Hope
+
+## Mơ ước
+Dream outcome: khách hàng hỏi mua đều đặn hơn, đo lường được sự quan tâm thật
+Cảm xúc muốn có: tự tin, rõ ràng, không còn mông lung
+Danh tính mới: Solo-Expert làm marketing có chủ đích, biết mỗi hành động dẫn tới đâu
+
+## Hướng đến niềm vui (approach, không chỉ avoidance)
+- Gia đình nhìn nhận đây là một nghề thật sự, không phải "làm chơi"
+- Được tập trung vào công việc yêu thích mà vẫn kiếm ra tiền
+- Được công nhận là chuyên gia thật sự trong ngách, có vị thế, được tôn trọng
+- Khách hàng chủ động tìm đến hỏi mua, không phải chạy theo mời chào
+- Thu nhập đủ ổn định để toàn tâm toàn ý theo đuổi vì đam mê, không vì cơm áo gạo tiền
+- Lời nói ra được khách hàng xem là "lời vàng lời ngọc"
+- Có cộng đồng những người yêu mến và tin tưởng vào năng lực của mình
+
+## Nỗi sợ thật sự
+- Lặp lại thất bại cũ (mua rồi bỏ dở)
+- Tốn tiền mà vẫn không tự làm được
+- Không tìm được người thuê ngoài đủ tâm huyết, đúng giá
+- Không biết khi nào mới có kết quả
+- Không ai quan tâm Social của mình / nhắm sai khách hàng
+- Doanh thu mãi bấp bênh, không dự đoán được
+
+## Cuộc sống trước/sau
+BEFORE - Have: sản phẩm chưa hệ thống hóa | Feel: mông lung, quá tải, thấp thỏm mỗi khi nghĩ đến tháng ít khách | Ngày: vừa full-time vừa tự mày mò marketing, tự hỏi có nên rẽ hẳn sang nghề này | Status: gia đình xem là "làm thêm", phải chủ động mời chào mới có khách
+AFTER - Have: hệ thống Social to Sale + landing page đúng ý - một tài sản của riêng mình | Feel: tự tin, an toàn đủ để toàn tâm toàn ý vì đam mê, không vì cơm áo gạo tiền | Ngày: biết rõ hành động nào tạo ra khách hàng, có thời gian tập trung việc mình yêu thích | Status: gia đình nhìn nhận là nghề thật sự; được xem là chuyên gia có vị thế; khách chủ động nhắn hỏi mua; có cộng đồng người yêu mến và tin vào năng lực mình
+
+## Một ngày bình thường
+Viết bài, thiết kế hình, quay video, học thêm (vd coaching), gặp khách hàng, nhiều người vẫn giữ 1 job full-time song song. Lướt điện thoại nhiều, đặc biệt lúc làm marketing và mọi lúc rảnh.
+Thời điểm vàng: rải rác trong ngày, không cố định giờ - ưu tiên nội dung ngắn dễ tiêu thụ.
+
+## Điều khiến họ vui và kể cho người khác
+- Ra được landing page đẹp, đúng ý - biến ý tưởng ấp ủ đã lâu thành hiện thực
+- Nhận tin nhắn đầu tiên từ khách lạ chủ động hỏi mua, không phải do mình mời chào
+- Được người trong gia đình chủ động hỏi thăm/khen về công việc - dấu hiệu họ nhìn nhận đây là nghề thật sự
+- Được một Solo-Expert khác trong cộng đồng nhắc đến, giới thiệu, mời chia sẻ kinh nghiệm
+- Khách hàng nhắc lại đúng nguyên văn lời khuyên của họ như điều tâm đắc - cảm giác lời mình nói "có trọng lượng"
+
+## Objections List
+1. "Mua rồi lại bỏ dở như mấy lần trước" - Gốc rễ: không tin vào kỷ luật bản thân - Address: cam kết đồng hành offline, bắt buộc thực hành
+2. "Tốn tiền mà vẫn không tự làm được" - Gốc rễ: từng học lý thuyết suông - Address: cam kết đầu ra cụ thể
+3. "Muốn thuê người nhưng khó tìm đúng người, đúng giá" - Gốc rễ: mong muốn outsource hoàn toàn - Address: so sánh chi phí/thời gian thuê ngoài vs tự làm
+4. "Không biết khi nào mới có kết quả" - Gốc rễ: sợ đầu tư mà không thấy tiến độ - Address: cột mốc đo lường theo từng giai đoạn
+5. "Đã học Mayashare/khóa khác mà không có kết quả" - Gốc rễ: hoài nghi phương pháp mới có thật sự khác - Address: bằng chứng cụ thể + khác biệt cơ chế
+6. "Nghe nhiều người nói nhiều kiểu, không biết ai đúng" - Gốc rễ: thiếu bộ lọc, không thiếu thông tin - Address: định vị 1 hệ thống duy nhất, đủ trình tự
+
+Objection nặng nhất: "Mua rồi lại bỏ dở như mấy lần trước"
+
+## Cách nói chuyện để bán hàng
+Hook: "Bạn đã có sản phẩm, đã từng bán được hàng - nhưng khách đến thất thường, và bạn đang nghe quá nhiều lời khuyên marketing khác nhau mà không biết tin ai. Bạn không cần thêm một lời khuyên nữa. Bạn cần một hệ thống duy nhất, đủ trình tự, để biến người follow bạn thành khách hàng - dù follow chưa nhiều. Để một ngày, gia đình nhìn công việc này là một nghề thật sự, và khách hàng chủ động tìm đến bạn thay vì bạn phải chạy theo mời chào."
+Angle: Pain-driven + Enemy-framing nhẹ (đối đầu tình trạng quá tải thông tin marketing)
+Proof point: case study định lượng thật
+Kênh đầu tiên: Facebook Group Solo-Expert -> Messenger
+
+## Tóm tắt
+Solo-Expert đã xây kênh social >1 năm, có sản phẩm/dịch vụ và đã từng bán được, nhưng khách đến thất thường. Tụ tập trong các FB Group Solo-Expert, thích liên hệ qua Messenger. Đã thử thuê ngoài, tự làm, mua khóa online, học Mayashare - đều thất vọng, nên sợ nhất là lặp lại vòng lặp thất bại đó. Mơ ước là tự tin, biết rõ hành động marketing nào dẫn tới đâu, giữa hàng tá lời khuyên trái chiều. Tiếp cận tốt nhất vào bất kỳ lúc nào họ rảnh lướt điện thoại - nội dung cần ngắn, dễ tiêu thụ ngay.
+`;
+
+document.getElementById('copyBtn').addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(mdContent);
+    document.getElementById('toast').textContent = 'Đã copy vào clipboard';
+    setTimeout(() => document.getElementById('toast').textContent = '', 2000);
+  } catch (e) {
+    document.getElementById('toast').textContent = 'Không copy được — thử chọn thủ công';
+  }
+});
+
+document.getElementById('downloadBtn').addEventListener('click', () => {
+  const blob = new Blob([mdContent], { type: 'text/markdown' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'avatar-social-to-sale.md';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+</script>
+</body>
+</html>
