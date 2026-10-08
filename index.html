@@ -22,6 +22,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
   <style>
+.checkout-icon{width:22px;height:22px;display:inline-block;vertical-align:middle;color:var(--gold);margin:0 5px;flex-shrink:0}.success-icon .checkout-icon{width:64px;height:64px;padding:12px;margin:0 auto;border:1px solid rgba(200,222,49,.35);border-radius:50%;background:rgba(200,222,49,.07)}
+
     .payment-progress { width: min(100%, 360px); height: 8px; margin: 18px auto 12px; overflow: hidden; border-radius: 999px; background: rgba(200,222,49,0.15); }
     .payment-progress-bar { display: block; width: 45%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, rgba(200,222,49,0.25), var(--gold), #eff7aa); animation: payment-progress-slide 3.6s ease-in-out infinite; }
     @keyframes payment-progress-slide { from { transform: translateX(-110%); } to { transform: translateX(230%); } }
@@ -6044,7 +6046,7 @@ html, body {
             <!-- Success: QR Payment -->
             <div id="reg-success-view" class="form-success" style="display:none;">
               <div id="payment-transfer-details">
-              <span class="success-icon">🎉</span>
+              <span class="success-icon"><svg class="checkout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 16 3-3 2 2 4-5"/><path d="M7 3h10l4 5v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8z"/><path d="M3 8h18M8 3v5m8-5v5"/></svg></span>
               <h3>Đăng Ký Thành Công!</h3>
               <p style="margin-bottom:8px;">Scan QR bên dưới để hoàn tất thanh toán.</p>
               <p style="font-family:'Beautique Display',serif; font-size:0.9rem; color:var(--gold-light); margin-bottom:4px;">Số tiền cần thanh toán:</p>
@@ -6054,7 +6056,7 @@ html, body {
               <img id="payment-qr" src="" alt="QR thanh toán" style="width:210px; height:210px; border-radius:12px; border:2px solid rgba(201,168,76,0.4); display:block; margin:0 auto 12px;" />
               <p style="font-family:'Beautique Display',serif; font-size:0.82rem; color:rgba(255,255,255,0.8);">MBBank · 0362722725 · Hồng Thiên Ý</p>
               <div style="margin:16px 0 0; padding:12px 16px; background:rgba(201,168,76,0.12); border:1px solid rgba(201,168,76,0.4); border-radius:10px;">
-                <p style="font-size:0.88rem; color:var(--gold-light); font-weight:600; margin:0;">⚠️ Sau khi chuyển khoản xong, vui lòng <u>giữ nguyên trang này</u> để hệ thống tự xác nhận thanh toán cho bạn.</p>
+                <p style="font-size:0.88rem; color:var(--gold-light); font-weight:600; margin:0;"><svg class="checkout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.1"/></svg> Sau khi chuyển khoản xong, vui lòng <u>giữ nguyên trang này</u> để hệ thống tự xác nhận thanh toán cho bạn.</p>
               </div>
               <p style="margin-top:16px;font-size:0.88rem;color:rgba(255,255,255,0.8);">Thời gian còn lại để hoàn tất thanh toán</p>
               <p id="payment-countdown" style="font-size:1.8rem;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums;letter-spacing:0.05em;">15:00</p>
@@ -6062,7 +6064,7 @@ html, body {
               </div>
               <div id="payment-countdown-wrap" style="margin-top:16px;">
                 <div id="payment-loading" role="status" aria-live="polite">
-                  <p style="font-size:1rem; color:var(--gold); font-weight:700;">Chuyển khoản xong rồi? Pha một ly cà phê hoặc trà nhé ☕</p>
+                  <p style="font-size:1rem; color:var(--gold); font-weight:700;">Chuyển khoản xong rồi? Pha một ly cà phê hoặc trà nhé <svg class="checkout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM16 10h2a3 3 0 0 1 0 6h-2M3 22h16M8 2v3m5-3v3"/></svg></p>
                   <p style="font-size:0.92rem; line-height:1.7; color:rgba(255,255,255,0.85); margin-top:6px;">Giữ trang này mở — hành trình Social To Sale sắp bắt đầu!</p>
                   <div class="payment-progress" aria-hidden="true"><span class="payment-progress-bar"></span></div>
                   <p style="font-size:0.88rem; color:rgba(255,255,255,0.75);">Đang chờ xác nhận thanh toán…</p>
@@ -6074,16 +6076,16 @@ html, body {
 
             <!-- Success: Checkout done -->
             <div id="checkout-success-view" class="form-success" style="display:none;">
-              <span class="success-icon">✅</span>
+              <span class="success-icon"><svg class="checkout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m7.5 12 3 3 6-6"/></svg></span>
               <h3 style="color:var(--gold);">Thanh Toán Thành Công!</h3>
-              <p style="margin-top:12px; line-height:1.8;">Chào mừng bạn đến với Social To Sale! 🎉<br>Mọi thông tin và hỗ trợ của lớp sẽ được cập nhật trong nhóm Zalo.</p>
+              <p style="margin-top:12px; line-height:1.8;">Chào mừng bạn đến với Social To Sale! <svg class="checkout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 16 3-3 2 2 4-5"/><path d="M7 3h10l4 5v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8z"/><path d="M3 8h18M8 3v5m8-5v5"/></svg><br>Mọi thông tin và hỗ trợ của lớp sẽ được cập nhật trong nhóm Zalo.</p>
               <div style="margin-top:20px; padding:20px 18px; background:rgba(200,222,49,0.12); border:2px solid var(--gold); border-radius:14px; box-shadow:0 0 24px rgba(200,222,49,0.25);">
-                <p style="margin:0 0 6px; font-size:1.05rem; font-weight:700; color:var(--gold);">📌 Bước tiếp theo: vào nhóm Zalo của lớp để chọn lịch học</p>
+                <p style="margin:0 0 6px; font-size:1.05rem; font-weight:700; color:var(--gold);"><svg class="checkout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 1-8 8H6l-4 3V11a9 9 0 0 1 18 0Z"/><path d="M7 9h8m-8 4h5"/></svg> Bước tiếp theo: vào nhóm Zalo của lớp để chọn lịch học</p>
                 <p style="margin:0 0 14px; font-size:0.92rem; line-height:1.6; color:rgba(255,255,255,0.85);">Bấm vào link bên dưới để tham gia nhóm. Cả lớp sẽ cùng chọn khung giờ phù hợp cho 3 buổi Online + 3 buổi Offline (khóa K06: 19/10 – 15/11).</p>
                 <a href="https://zalo.me/g/v2qoz1ydkzcoltscb42m" target="_blank" rel="noopener" style="display:inline-block; padding:14px 28px; background:var(--gold); color:var(--navy); font-weight:800; border-radius:10px; text-decoration:none; font-size:1rem;">Vào Nhóm Zalo Chọn Lịch Học →</a>
                 <p style="margin:12px 0 0; font-size:0.82rem; color:rgba(255,255,255,0.65); word-break:break-all;">Hoặc copy link: https://zalo.me/g/v2qoz1ydkzcoltscb42m</p>
               </div>
-              <p style="margin-top:16px; font-size:0.88rem; color:rgba(255,255,255,0.7);">Hẹn gặp bạn tại Focus Camp! 🎓</p>
+              <p style="margin-top:16px; font-size:0.88rem; color:rgba(255,255,255,0.7);">Hẹn gặp bạn tại Focus Camp! <svg class="checkout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-5 9 5-9 5zM6 11v6c4 3 8 3 12 0v-6M21 9v8"/></svg></p>
             </div>
           </div>
 
@@ -6585,7 +6587,7 @@ html, body {
                 'https://qr.sepay.vn/img?acc=0362722725&bank=MBBank&amount=' + amount + '&des=' + encodeURIComponent(code);
               startPaymentWatcher(code);
             } else {
-              document.getElementById('reg-success-view').innerHTML = '<span class="success-icon">🎉</span><h3 style="color:var(--gold);">Đã Ghi Nhận Yêu Cầu!</h3><p style="margin-top:12px; line-height:1.6; color:rgba(255,255,255,0.9);">Cảm ơn bạn đã quan tâm đến Gói Cấp Tốc 1:1. Ý sẽ liên hệ trực tiếp với bạn qua Zalo hoặc Số điện thoại trong thời gian sớm nhất để tư vấn và báo giá chi tiết nhé.</p>';
+              document.getElementById('reg-success-view').innerHTML = '<span class="success-icon"><svg class="checkout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 16 3-3 2 2 4-5"/><path d="M7 3h10l4 5v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8z"/><path d="M3 8h18M8 3v5m8-5v5"/></svg></span><h3 style="color:var(--gold);">Đã Ghi Nhận Yêu Cầu!</h3><p style="margin-top:12px; line-height:1.6; color:rgba(255,255,255,0.9);">Cảm ơn bạn đã quan tâm đến Gói Cấp Tốc 1:1. Ý sẽ liên hệ trực tiếp với bạn qua Zalo hoặc Số điện thoại trong thời gian sớm nhất để tư vấn và báo giá chi tiết nhé.</p>';
             }
           })
           .catch(function () {
