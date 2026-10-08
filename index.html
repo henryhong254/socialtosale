@@ -26,6 +26,9 @@
     .payment-progress-bar { display: block; width: 45%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, rgba(200,222,49,0.25), var(--gold), #eff7aa); animation: payment-progress-slide 3.6s ease-in-out infinite; }
     @keyframes payment-progress-slide { from { transform: translateX(-110%); } to { transform: translateX(230%); } }
     @media (prefers-reduced-motion: reduce) { .payment-progress-bar { animation: none; margin: 0 auto; } }
+    .payment-celebration { position: fixed; inset: 0; pointer-events: none; z-index: 2147483647; overflow: hidden; }
+    .payment-celebration i { position: absolute; top: -24px; width: 9px; height: 15px; border-radius: 2px; animation: payment-confetti-fall var(--duration) ease-in var(--delay) both; }
+    @keyframes payment-confetti-fall { 0% { transform: translate3d(0,-24px,0) rotate(0deg); opacity: 0; } 8% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translate3d(var(--drift),110vh,0) rotate(var(--spin)); opacity: 0; } }
 
 html, body {
   max-width: 100vw !important;
@@ -6625,10 +6628,14 @@ html, body {
           clearInterval(countdownInterval);
         }
 
+        let celebrated = false;
         function showCheckoutSuccess() {
+          if (celebrated) return;
+          celebrated = true;
           stopAll();
           document.getElementById('reg-success-view').style.display = 'none';
           document.getElementById('checkout-success-view').style.display = '';
+          celebratePayment();
         }
 
         function checkPayment() {
@@ -6662,6 +6669,28 @@ html, body {
         pollInterval = setInterval(checkPayment, 5000);
       }
     })();
+
+    function celebratePayment() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const previous = document.querySelector('.payment-celebration');
+      if (previous) previous.remove();
+      const layer = document.createElement('div');
+      layer.className = 'payment-celebration';
+      layer.setAttribute('aria-hidden', 'true');
+      const colors = ['#C8DE31', '#F5F3E9', '#ffcb66', '#56d6b2', '#f39dc3'];
+      for (let i = 0; i < 64; i++) {
+        const piece = document.createElement('i');
+        piece.style.left = Math.random() * 100 + '%';
+        piece.style.background = colors[i % colors.length];
+        piece.style.setProperty('--duration', (2.4 + Math.random() * 1.2) + 's');
+        piece.style.setProperty('--delay', Math.random() * 0.8 + 's');
+        piece.style.setProperty('--drift', (Math.random() * 180 - 90) + 'px');
+        piece.style.setProperty('--spin', (Math.random() * 900 - 450) + 'deg');
+        layer.appendChild(piece);
+      }
+      document.body.appendChild(layer);
+      setTimeout(function () { layer.remove(); }, 4600);
+    }
 
     /* ── Sub-Nav Active State ── */
     (function () {
