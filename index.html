@@ -6546,11 +6546,18 @@ html, body {
           pkgLabel = 'Gói Cấp Tốc - Báo giá riêng';
         }
 
-        const params = new URLSearchParams({ name, phone, email, package: pkgLabel });
+        const params = new URLSearchParams({ name, phone, email, package: pkgLabel, packageId: selectedPkg, coupon: discountType ? coupon : '' });
         fetch(SCRIPT_URL + '?' + params.toString())
           .then(function (res) { return res.json(); })
           .then(function (data) {
-            const code = data.code || ('LPWS' + Math.random().toString(36).substring(2,6).toUpperCase());
+            if (data.ok !== true || typeof data.code !== 'string') throw new Error('Registration was not saved');
+            const code = data.code;
+            if (data.version === 'sts-v1') {
+              if (!/^STS[A-F0-9]{8}$/.test(code) || !Number.isSafeInteger(data.amount) || data.amount < 0 || (selectedPkg !== 'private' && data.amount === 0)) throw new Error('Invalid payment details');
+              amount = data.amount;
+            } else if (!/^LPWS[A-Z0-9]{4}$/.test(code)) {
+              throw new Error('Invalid order code');
+            } // Temporary compatibility until the separate Apps Script deployment is updated.
             document.getElementById('reg-form-view').style.display = 'none';
             document.getElementById('reg-success-view').style.display = '';
             
@@ -6599,10 +6606,10 @@ html, body {
         }
 
         function checkPayment() {
-          fetch(SCRIPT_URL + '?action=check&code=' + encodeURIComponent(code))
+          fetch(SCRIPT_URL + '?action=check&code=' + encodeURIComponent(code), { cache: 'no-store' })
             .then(function (res) { return res.json(); })
             .then(function (data) {
-              if (data.paid) showCheckoutSuccess();
+              if (data.paid === true) showCheckoutSuccess();
             })
             .catch(function () {}); // silent fail, keep polling
         }
