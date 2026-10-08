@@ -6053,6 +6053,8 @@ html, body {
               <div style="margin:16px 0 0; padding:12px 16px; background:rgba(201,168,76,0.12); border:1px solid rgba(201,168,76,0.4); border-radius:10px;">
                 <p style="font-size:0.88rem; color:var(--gold-light); font-weight:600; margin:0;">⚠️ Sau khi chuyển khoản xong, vui lòng <u>giữ nguyên trang này</u> để hệ thống tự xác nhận thanh toán cho bạn.</p>
               </div>
+              <p style="margin-top:16px;font-size:0.88rem;color:rgba(255,255,255,0.8);">Thời gian còn lại để hoàn tất thanh toán</p>
+              <p id="payment-countdown" style="font-size:1.8rem;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums;letter-spacing:0.05em;">15:00</p>
               <button id="payment-sent-btn" type="button" style="margin-top:20px;padding:14px 24px;border:0;border-radius:12px;background:var(--gold);color:var(--navy);font:inherit;font-weight:700;cursor:pointer;">Tôi đã chuyển khoản →</button>
               </div>
               <div id="payment-countdown-wrap" style="margin-top:16px;">
@@ -6063,7 +6065,6 @@ html, body {
                   <p style="font-size:0.88rem; color:rgba(255,255,255,0.75);">Đang chờ xác nhận thanh toán…</p>
                   <button id="payment-back-btn" type="button" style="margin-top:16px;background:transparent;border:0;color:var(--gold);font:inherit;text-decoration:underline;cursor:pointer;">Xem lại mã QR</button>
                 </div>
-                <span id="payment-countdown" hidden aria-hidden="true"></span>
                 <p id="payment-timeout-msg" style="display:none; font-size:0.88rem; color:#e57373; margin-top:8px;">Hết thời gian chờ. Nếu đã chuyển khoản, vui lòng nhắn tin cho Ý để được hỗ trợ.</p>
               </div>
             </div>
@@ -6643,6 +6644,7 @@ html, body {
         document.getElementById('payment-loading').style.display = 'none';
         timeoutMsgEl.style.display = 'none';
         countdownEl.textContent = formatTime(remaining);
+        countdownEl.style.display = '';
         countdownInterval = setInterval(function () {
           remaining--;
           countdownEl.textContent = formatTime(remaining);
