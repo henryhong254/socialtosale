@@ -22,9 +22,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
   <style>
-    .payment-spinner { display: inline-block; width: 28px; height: 28px; border: 3px solid rgba(200,222,49,0.2); border-top-color: var(--gold); border-radius: 50%; animation: payment-spin 1s linear infinite; margin-bottom: 8px; }
-    @keyframes payment-spin { to { transform: rotate(360deg); } }
-    @media (prefers-reduced-motion: reduce) { .payment-spinner { animation: none; } }
+    .payment-progress { width: min(100%, 360px); height: 8px; margin: 18px auto 12px; overflow: hidden; border-radius: 999px; background: rgba(200,222,49,0.15); }
+    .payment-progress-bar { display: block; width: 45%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, rgba(200,222,49,0.25), var(--gold), #eff7aa); animation: payment-progress-slide 3.6s ease-in-out infinite; }
+    @keyframes payment-progress-slide { from { transform: translateX(-110%); } to { transform: translateX(230%); } }
+    @media (prefers-reduced-motion: reduce) { .payment-progress-bar { animation: none; margin: 0 auto; } }
 
 html, body {
   max-width: 100vw !important;
@@ -6053,9 +6054,10 @@ html, body {
               </div>
               <div id="payment-countdown-wrap" style="margin-top:16px;">
                 <div id="payment-loading" role="status" aria-live="polite">
-                  <span class="payment-spinner" aria-hidden="true"></span>
-                  <p style="font-size:1rem; color:var(--gold); font-weight:700;">Đang chờ xác nhận thanh toán…</p>
-                  <p style="font-size:0.92rem; line-height:1.7; color:rgba(255,255,255,0.85); margin-top:6px;">Chuyển khoản xong rồi? Pha một ly cà phê hoặc trà nhé ☕<br>Giữ trang này mở, chúng mình sẽ báo ngay khi thanh toán được xác nhận — hành trình Social To Sale sắp bắt đầu!</p>
+                  <p style="font-size:1rem; color:var(--gold); font-weight:700;">Chuyển khoản xong rồi? Pha một ly cà phê hoặc trà nhé ☕</p>
+                  <p style="font-size:0.92rem; line-height:1.7; color:rgba(255,255,255,0.85); margin-top:6px;">Giữ trang này mở — hành trình Social To Sale sắp bắt đầu!</p>
+                  <div class="payment-progress" aria-hidden="true"><span class="payment-progress-bar"></span></div>
+                  <p style="font-size:0.88rem; color:rgba(255,255,255,0.75);">Đang chờ xác nhận thanh toán…</p>
                 </div>
                 <span id="payment-countdown" hidden aria-hidden="true"></span>
                 <p id="payment-timeout-msg" style="display:none; font-size:0.88rem; color:#e57373; margin-top:8px;">Hết thời gian chờ. Nếu đã chuyển khoản, vui lòng nhắn tin cho Ý để được hỗ trợ.</p>
