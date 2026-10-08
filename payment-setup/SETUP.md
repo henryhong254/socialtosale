@@ -22,3 +22,13 @@ Website đã sẵn sàng nhận mã STS và số tiền từ Apps Script. Trư�
 
 Tài liệu: https://developer.sepay.vn/vi/sepay-webhooks/tich-hop-webhook
 Apps Script: https://developers.google.com/apps-script/guides/web
+
+## Thông báo đăng ký qua Telegram
+
+1. Tạo bot với BotFather chính thức (https://t.me/BotFather), lệnh /newbot. Giữ token riêng.
+2. Mở bot vừa tạo, nhấn Start. Trong Script Properties thêm TELEGRAM_BOT_TOKEN và TELEGRAM_CHAT_ID của cuộc trò chuyện cá nhân bạn muốn nhận tin.
+3. Thay code bằng bản Code.gs mới. Giữ nguyên SHEET_ID, BANK_ACCOUNT và WEBHOOK_SECRET. Không chạy lại setupWebhook hoặc thay URL SePay.
+4. Chạy testTelegram từ Editor để gửi tin thử tới chat đã cấu hình. Sau đó cập nhật Web app hiện tại bằng New version, giữ URL /exec.
+5. Tạo đăng ký mới để kiểm tra thông báo. Bot báo đơn mới, không có nghĩa là đã thanh toán. Không gửi lại các đơn cũ.
+
+Thông báo Telegram là best-effort: nếu API lỗi, đơn vẫn được lưu và khách vẫn nhận QR; xem Apps Script execution log khi không nhận tin. Chưa có cơ chế hàng đợi gửi lại. Token chỉ nằm trong Script Properties, không đưa vào Git hay chat.

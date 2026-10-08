@@ -57,6 +57,7 @@ function doGet(e) {
     if (String(p.name || '').trim().length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(p.email || '')) throw new Error('invalid contact');
     if (!/^(0|\+84)[0-9]{8,10}$/.test(String(p.phone || '').replace(/[\s-]/g, ''))) throw new Error('invalid phone');
     const quote = action === 'register' ? price_(p) : null;
+    let registration;
     const lock = LockService.getScriptLock();
     lock.waitLock(10000);
     try {
@@ -67,9 +68,48 @@ function doGet(e) {
       const sh = sheet_('Đăng ký', HEADERS);
       const code = newCode_(sh.getDataRange().getValues());
       sh.appendRow([new Date(),code,text_(p.name),"'" + p.phone,text_(p.email),quote.label,quote.amount ? 'Chờ thanh toán' : 'Chờ tư vấn',quote.amount,'','','']);
-      return json_({ok: true, code: code, amount: quote.amount, version: 'sts-v1'});
+      registration = {ok: true, code: code, amount: quote.amount, version: 'sts-v1'};
     } finally { lock.releaseLock(); }
+    // A Telegram failure must never turn a saved registration into a failed order.
+    notifyRegistration_(p, registration, quote);
+    return json_(registration);
   } catch (err) { return json_({ok: false, error: String(err.message || err)}); }
+}
+
+function sendTelegram_(text) {
+  const props = PropertiesService.getScriptProperties();
+  const token = props.getProperty('TELEGRAM_BOT_TOKEN');
+  const chatId = props.getProperty('TELEGRAM_CHAT_ID');
+  if (!token || !chatId) return false;
+  try {
+    const response = UrlFetchApp.fetch('https://api.telegram.org/bot' + token + '/sendMessage', {
+      method: 'post', contentType: 'application/json', muteHttpExceptions: true,
+      payload: JSON.stringify({chat_id: chatId, text: text, link_preview_options: {is_disabled: true}})
+    });
+    const body = JSON.parse(response.getContentText());
+    if (response.getResponseCode() === 200 && body.ok === true) return true;
+    console.warn('Telegram notification failed; HTTP ' + response.getResponseCode());
+  } catch (_) { console.warn('Telegram unavailable; registration remains saved.'); }
+  return false;
+}
+function notifyRegistration_(p, registration, quote) {
+  const clean = value => String(value || '').replace(/[\r\n]/g, ' ').slice(0, 300);
+  const packages = {standard:'Standard', premium:'Premium', private:'Cấp Tốc 1:1'};
+  return sendTelegram_([
+    'SOCIAL TO SALE — ĐĂNG KÝ MỚI',
+    'Họ tên: ' + clean(p.name),
+    'SĐT/Zalo: ' + clean(p.phone),
+    'Gói: ' + (packages[p.packageId] || clean(p.packageId)),
+    'Mã đơn: ' + registration.code,
+    'Số tiền: ' + quote.amount.toLocaleString('vi-VN') + 'đ',
+    'Trạng thái: ' + (quote.amount ? 'Chờ thanh toán' : 'Chờ tư vấn')
+  ].join('\n'));
+}
+function testTelegram() {
+  if (!sendTelegram_('SOCIAL TO SALE — Kết nối thông báo đăng ký thành công. Đây là tin nhắn thử, không tạo đơn.')) {
+    throw new Error('Check TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID. Open your bot and press Start first.');
+  }
+  console.log('Telegram test delivered.');
 }
 
 // Run once in the editor. The secret stays in Script Properties, never in Git or the website.
