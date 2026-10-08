@@ -8,14 +8,14 @@
 
   <!-- Open Graph / Social sharing -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://workshop.foundersnorth.com.vn/" />
-  <meta property="og:title" content="Workshop: Tự Xây Trang Bán Hàng Bằng AI – Founder's North" />
-  <meta property="og:description" content="Workshop 2 ngày giúp Founder SME/Startup tự tay xây Landing Page bằng AI. Không cần biết code. Cam kết ra về có trang đã launching. Early Bird 6.800.000đ." />
-  <meta property="og:image" content="https://workshop.foundersnorth.com.vn/Assets/lpkt.jpg" />
+  <meta property="og:url" content="https://s2s.foundersnorth.com.vn/" />
+  <meta property="og:title" content="Social To Sale Focus Camp - Founder's North" />
+  <meta property="og:description" content="Workshop Xây Dựng 3 Trạm Chuyển Đổi Cùng AI. Giúp Founder tự tay xây Landing Page bằng AI không cần code. Lớp siêu nhỏ 5 học viên." />
+  <meta property="og:image" content="https://s2s.foundersnorth.com.vn/Assets/hero-preview.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://workshop.foundersnorth.com.vn/Assets/lpkt.jpg" />
+  <meta name="twitter:image" content="https://s2s.foundersnorth.com.vn/Assets/hero-preview.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
@@ -2788,6 +2788,22 @@ html, body {
   .instructor-card { padding: 24px 16px !important; }
   #class-gallery { padding: 40px 16px !important; }
 }
+  @media (max-width: 768px) { .hide-mobile { display: none !important; } }
+  @media (max-width: 768px) { .pain-mobile-pad { padding-left: 10px !important; padding-right: 10px !important; } }
+  @media (max-width: 600px) { .ai-opt-badge { font-size: 0.55rem; padding: 4px 36px; top: 14px; right: -38px; } }
+  @media (max-width: 768px) {
+    #faq { padding-left: 10px !important; padding-right: 10px !important; }
+    .faq-header h2 { font-size: 1.8rem !important; white-space: nowrap !important; }
+    .faq-q { padding: 16px 20px !important; }
+    .faq-q span { font-size: 1.1rem !important; font-family: 'Beautique Display', serif !important; }
+    .pain-text-item h2 { font-size: 1.8rem !important; }
+    .faq-a-inner { padding: 0 16px 16px !important; }
+  }
+  @media (max-width: 768px) { .showcase-title { font-size: 1.8rem !important; line-height: 1.3 !important; } }
+  @media (max-width: 768px) { .premium-title { font-size: 1.6rem !important; line-height: 1.3 !important; } }
+  @media (max-width: 768px) { .gallery-title { font-size: 1.6rem !important; line-height: 1.3 !important; white-space: nowrap !important; } }
+  @media (max-width: 768px) { #solution-transition { padding-top: 100px !important; } }
+  @media (max-width: 768px) { .for-box h3 { font-size: 1.4rem !important; } }
 </style>
 
 <style>
@@ -2907,7 +2923,7 @@ html, body {
   <!-- NAV -->
   <nav>
     <a href="#hero" class="nav-logo">Founder's<span> North</span></a>
-    <a href="#pricing" class="nav-cta" id="nav-cta-btn">✨ Đăng Ký Ngay</a>
+    <a href="#pricing" class="nav-cta" id="nav-cta-btn">Đăng Ký Ngay</a>
   </nav>
   
   <!-- Sub-Nav / Table of Content -->
@@ -2927,7 +2943,9 @@ html, body {
   <!-- ───────────── HERO ───────────── -->
   <!-- ================= HERO ================= -->
 
-\n\n  <!-- ───────────── SCHEDULE ───────────── -->
+
+
+  <!-- ───────────── SCHEDULE ───────────── -->
   <!-- ================= NEW SCHEDULE ================= -->
 
 <!-- ================= END NEW SCHEDULE ================= -->
@@ -2969,27 +2987,29 @@ html, body {
 </section>
 
 <section id="pain" style="position: relative; height: 400vh; background: #F2EDE3;">
-    <div class="sticky-wrapper" style="position: sticky; top: 0; width: 100%; height: 100vh; background: #F2EDE3; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 112px 24px 24px; z-index: 10;">
+    <div class="sticky-wrapper pain-mobile-pad" style="position: sticky; top: 0; width: 100%; height: 100vh; background: #F2EDE3; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 112px 10px 24px; z-index: 10;">
       <div style="text-align:center; position: relative; z-index: 10; margin-bottom: 64px; margin-top: -28px; width: 100%; max-width: 1000px;">
         <span class="section-label" id="pain-transition-label" style="color: var(--navy); opacity: 0.9; letter-spacing: 0.02em; font-size: clamp(1.6rem, 3.5vw, 2.2rem); text-transform: none; max-width: 1200px; display: inline-block; line-height: 1.5; padding: 0 24px; font-weight: 700;">Đây Có Giống Mỗi Ngày Của Bạn?</span>
       </div>
-      <div id="painItems" style="position: relative; width: 100%; max-width: 1000px; height: 180px;">
+      <div id="painItems" style="position: relative; width: 100%; height: 250px; display: flex; align-items: center; justify-content: center; overflow: visible;">
+        <!-- Item 1 -->
         <div class="pain-text-item" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 1; transform: translateY(0); will-change: opacity, transform;">
           <h2 style="font-family: 'EB Garamond', serif; font-size: clamp(1.8rem, 4vw, 3.2rem); text-align: center; line-height: 1.4; color: var(--navy); font-weight: 500;">
-            Miệt mài tìm ý tưởng, viết bài giá trị, nhưng<br/><span class="highlight-marker" style="display: inline; font-style: normal; color: var(--navy); background-color: var(--gold); padding: 0.1em 0.2em; -webkit-box-decoration-break: clone; box-decoration-break: clone; border-radius: 6px;">không chắc có thật sự tạo ra khách hàng.</span>
+            Miệt mài viết bài giá trị <br class="hide-mobile"/>nhưng <span class="highlight-marker" style="display: inline; font-style: normal; color: var(--navy); background-color: var(--gold); padding: 0.1em 0.2em; -webkit-box-decoration-break: clone; box-decoration-break: clone; border-radius: 6px;">không mấy ai xem</span>
           </h2>
         </div>
+        <!-- Item 2 -->
         <div class="pain-text-item" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(50px); will-change: opacity, transform;">
           <h2 style="font-family: 'EB Garamond', serif; font-size: clamp(1.8rem, 4vw, 3.2rem); text-align: center; line-height: 1.4; color: var(--navy); font-weight: 500;">
-            Tư vấn cho khách nhiệt tình,<br/>đến đoạn báo giá lại <span class="highlight-marker" style="display: inline; font-style: normal; color: var(--navy); background-color: var(--gold); padding: 0.1em 0.2em; -webkit-box-decoration-break: clone; box-decoration-break: clone; border-radius: 6px;">ngập ngừng, sợ hãi</span>
+            Tư vấn khách nhiệt tình, <br class="hide-mobile"/>đến đoạn báo giá lại <span class="highlight-marker" style="display: inline; font-style: normal; color: var(--navy); background-color: var(--gold); padding: 0.1em 0.2em; -webkit-box-decoration-break: clone; box-decoration-break: clone; border-radius: 6px;">ngập ngừng, sợ hãi</span>
           </h2>
         </div>
+        <!-- Item 3 -->
         <div class="pain-text-item" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(50px); will-change: opacity, transform;">
           <h2 style="font-family: 'EB Garamond', serif; font-size: clamp(1.8rem, 4vw, 3.2rem); text-align: center; line-height: 1.4; color: var(--navy); font-weight: 500;">
-            Hoài nghi bản thân, không biết<br/><span class="highlight-marker" style="display: inline; font-style: normal; color: var(--navy); background-color: var(--gold); padding: 0.1em 0.2em; -webkit-box-decoration-break: clone; box-decoration-break: clone; border-radius: 6px;">vì sao khách hàng nên chọn mình</span><br/>giữa vô vàn chuyên gia có tiếng
+            <span class="highlight-marker" style="display: inline; font-style: normal; color: var(--navy); background-color: var(--gold); padding: 0.1em 0.2em; -webkit-box-decoration-break: clone; box-decoration-break: clone; border-radius: 6px;">Hoài nghi bản thân</span> giữa <br/>vô vàn chuyên gia có tiếng
           </h2>
         </div>
-
       </div>
 </div>
   </section>
@@ -3030,6 +3050,7 @@ html, body {
   overflow-x: clip !important;
 }
 
+      @media (min-width: 769px) { #ht-hint { display: none !important; } }
       #ht-hint { display:flex; align-items:center; justify-content:center; gap:12px; margin: 8px auto 0; position:relative; z-index:5; transition: opacity .5s ease; }
       #ht-hint .ht-hint-pill { display:inline-flex; align-items:center; gap:12px; background:#023830; color:#ddf060; padding:12px 24px; border-radius:999px; font-family:'EB Garamond',serif; font-size:1.15rem; letter-spacing:.02em; box-shadow:0 8px 22px rgba(2,56,48,.3); animation: htPulse 2s ease-in-out infinite; }
       #ht-hint .ht-hint-arrows { display:inline-block; animation: htNudge 1.2s ease-in-out infinite; font-weight:700; letter-spacing:-2px; }
@@ -3042,7 +3063,7 @@ html, body {
       @keyframes htBtnPulse { 0%,100% { box-shadow:0 4px 15px rgba(0,0,0,.5); } 50% { box-shadow:0 4px 15px rgba(0,0,0,.5), 0 0 0 10px rgba(2,56,48,.18); } }
       @media (max-width: 768px) { #ht-hint .ht-hint-d { display:none; } #ht-hint .ht-hint-m { display:inline; } #ht-hint .ht-hint-pill { font-size:1rem; padding:10px 18px; } }
     </style>
-    <div id="ht-hint" class="reveal"><span class="ht-hint-pill"><span class="ht-hint-d">Kéo ngang hoặc bấm mũi tên để khám phá 3 trạm</span><span class="ht-hint-m">Vuốt ngang để khám phá 3 trạm</span><span class="ht-hint-arrows">&rsaquo;&rsaquo;&rsaquo;</span></span></div>
+    <div id="ht-hint" class="reveal"><span class="ht-hint-pill"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: handSwipe 1.5s ease-in-out infinite;"><path d="M11 14h-1a2 2 0 0 1-2-2V4.5a1.5 1.5 0 0 1 3 0V11"/><path d="M11 11h1a1.5 1.5 0 0 1 1.5 1.5V14"/><path d="M13.5 12h.5a1.5 1.5 0 0 1 1.5 1.5V14"/><path d="M15.5 13h.5a1.5 1.5 0 0 1 1.5 1.5v3.6a4 4 0 0 1-1.3 2.9l-2.4 2.2a2 2 0 0 1-1.4.6H8.5a3 3 0 0 1-2.9-2.3L4.4 17a2 2 0 0 1 1.2-2.4l3.4-1.3"/></svg><span class="ht-hint-d" style="margin-left: 8px;">Kéo ngang hoặc bấm mũi tên để khám phá 3 trạm</span><span class="ht-hint-m" style="margin-left: 8px;">Vuốt ngang khám phá 3 trạm</span><span class="ht-hint-arrows" style="margin-left: 8px;">&rsaquo;&rsaquo;&rsaquo;</span></span></div>
     <style>
 
 html, body {
@@ -3336,6 +3357,24 @@ html, body {
               <h3 class="ht-title">Điều Bạn Cần: Xây Dựng Personal Hub</h3>
               <p class="ht-desc">Personal Hub là 1 trang giúp khách hàng hiểu rõ bạn là ai, không chỉ về chuyên môn mà còn về những khía cạnh khác như sở thích, hành trình phát triển.</p>
               <!-- <div class="ht-badge">TRẠM I</div> -->
+              
+              <!-- DESKTOP HINT AT BOTTOM -->
+              <div class="desktop-only-hint" style="margin-top: 24px; width: 100%; text-align: center;">
+                <span class="ht-hint-pill" style="font-size:1.15rem; padding:12px 24px; display:inline-flex; align-items:center; gap:12px; background:#023830; color:#ddf060; border-radius:999px; font-family:'EB Garamond',serif; box-shadow:0 8px 22px rgba(2,56,48,.3); animation: htPulse 2s ease-in-out infinite;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: handSwipe 1.5s ease-in-out infinite;"><path d="M11 14h-1a2 2 0 0 1-2-2V4.5a1.5 1.5 0 0 1 3 0V11"/><path d="M11 11h1a1.5 1.5 0 0 1 1.5 1.5V14"/><path d="M13.5 12h.5a1.5 1.5 0 0 1 1.5 1.5V14"/><path d="M15.5 13h.5a1.5 1.5 0 0 1 1.5 1.5v3.6a4 4 0 0 1-1.3 2.9l-2.4 2.2a2 2 0 0 1-1.4.6H8.5a3 3 0 0 1-2.9-2.3L4.4 17a2 2 0 0 1 1.2-2.4l3.4-1.3"/></svg>
+                  <span style="margin-left: 0px;">Kéo ngang hoặc bấm mũi tên để khám phá 3 trạm</span>
+                  <span class="ht-hint-arrows" style="display:inline-block; animation: htNudge 1.2s ease-in-out infinite; font-weight:700; letter-spacing:-2px;">&rsaquo;&rsaquo;&rsaquo;</span>
+                </span>
+              </div>
+              <style>@media (max-width: 768px) { .desktop-only-hint { display: none !important; } }</style>
+              <div class="mobile-only-hint" style="display: none; margin-top: 24px; width: 100%; text-align: center;">
+                <span class="ht-hint-pill" style="font-size:1rem; padding:10px 18px; display:inline-flex; align-items:center; gap:8px; background:#023830; color:#ddf060; border-radius:999px; font-family:'EB Garamond',serif; box-shadow:0 8px 22px rgba(2,56,48,.3); animation: htPulse 2s ease-in-out infinite;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: handSwipe 1.5s ease-in-out infinite;"><path d="M11 14h-1a2 2 0 0 1-2-2V4.5a1.5 1.5 0 0 1 3 0V11"/><path d="M11 11h1a1.5 1.5 0 0 1 1.5 1.5V14"/><path d="M13.5 12h.5a1.5 1.5 0 0 1 1.5 1.5V14"/><path d="M15.5 13h.5a1.5 1.5 0 0 1 1.5 1.5v3.6a4 4 0 0 1-1.3 2.9l-2.4 2.2a2 2 0 0 1-1.4.6H8.5a3 3 0 0 1-2.9-2.3L4.4 17a2 2 0 0 1 1.2-2.4l3.4-1.3"/></svg>
+                  <span style="margin-left: 0px;">Vuốt ngang khám phá 3 trạm</span>
+                  <span class="ht-hint-arrows">&rsaquo;&rsaquo;&rsaquo;</span>
+                </span>
+              </div>
+              <style>@media (max-width: 768px) { .mobile-only-hint { display: block !important; } }</style>
             </div>
 
           </div>
@@ -3585,7 +3624,7 @@ scrollContainer.addEventListener('scroll', updateCarPosition, { passive: true })
 
     <div style="text-align: center; margin-bottom: 64px;" class="reveal">
       <h2 style="font-family: 'EB Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.2rem); color: var(--navy); margin-bottom: 16px;">AI Agent Là Công Cụ Đồng Hành</h2>
-      <p style="font-size: 1.3rem; color: rgba(2,56,48,0.85); max-width: 800px; margin: 0 auto; line-height: 1.6;">Phương Pháp Xây Hệ Thống <strong style="font-size: 1.4rem; color: var(--navy);">3 Không</strong>:<br/><strong style="color:var(--navy); font-size: 1.4rem;">Không Cần Biết Code - Không Giỏi Design - Không Thạo Content</strong></p>
+      <p style="font-size: 1.3rem; color: rgba(2,56,48,0.85); max-width: 800px; margin: 0 auto; line-height: 1.6;">Xây Dựng Hệ Thống <strong style="font-size: 1.4rem; color: var(--navy);">3 Không</strong>:<br/><strong style="color:var(--navy); font-size: 1.4rem;">Không Cần Biết Code - Không Giỏi Design - Không Thạo Content</strong></p>
     </div>
 
     <style>
@@ -3597,12 +3636,13 @@ scrollContainer.addEventListener('scroll', updateCarPosition, { passive: true })
       .ai-comp-card-dark { background: var(--navy); border: 1px solid rgba(2,56,48,0.1); color: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
       .ai-comp-card-gold { background: var(--gold); color: var(--navy); border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 20px 40px rgba(200,222,49,0.25); }
       
-      .ai-comp-title { font-family: 'Beautique Display', serif; font-size: 1.5rem; text-align: center; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; }
+      .ai-comp-title { font-family: 'Beautique Display', serif; font-size: clamp(1.05rem, 4.5vw, 1.5rem); text-align: center; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; }
       .ai-comp-card-dark .ai-comp-title { color: var(--gold); }
       
       .ai-comp-item { margin-bottom: 16px; display: block; }
       .ai-comp-item-title { font-weight: 700; font-size: 1.05rem; display: flex; align-items: center; gap: 8px; margin-bottom: 8px; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 0.03em; }
       .ai-comp-item-title .icon { font-size: 1.2rem; }
+      .ai-comp-card-dark .ai-comp-item-title .icon { color: var(--gold); }
       
       .ai-comp-item ul { list-style: none; padding: 0; margin: 0; }
       .ai-comp-item ul li { position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 1rem; line-height: 1.4; opacity: 0.9; }
@@ -3614,7 +3654,7 @@ scrollContainer.addEventListener('scroll', updateCarPosition, { passive: true })
       .ai-comp-card-gold .ai-comp-price-box { border-top-color: rgba(2,56,48,0.2); }
       
       .ai-comp-price-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.8; margin-bottom: 4px; }
-      .ai-comp-price-val { font-family: 'EB Garamond', serif; font-size: 2.8rem; font-weight: 700; line-height: 1; margin-bottom: 4px; }
+      .ai-comp-price-val { font-family: 'EB Garamond', serif; font-size: clamp(1.6rem, 6vw, 2.8rem); white-space: nowrap; font-weight: 700; line-height: 1; margin-bottom: 4px; }
       .ai-comp-price-sub { font-size: 0.85rem; opacity: 0.7; line-height: 1.4; }
       .ai-comp-card-gold .ai-comp-price-sub { opacity: 0.9; font-weight: 500; }
       
@@ -3644,7 +3684,7 @@ scrollContainer.addEventListener('scroll', updateCarPosition, { passive: true })
         <div class="ai-comp-item">
           <div class="ai-comp-item-title"><span class="icon" style="display:inline-flex; align-items:center; vertical-align:middle; width:22px; height:22px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"></path><path d="M5 2h14"></path><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"></path><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"></path></svg></span> THỜI GIAN</div>
           <ul>
-            <li>Thời gian hoàn thiện: <strong>~ 3 - 4 tuần</strong></li>
+            <li>Thời gian hoàn thiện: <strong>~ 3 - 4 tháng</strong></li>
           </ul>
         </div>
         
@@ -3687,7 +3727,7 @@ scrollContainer.addEventListener('scroll', updateCarPosition, { passive: true })
         <div class="ai-comp-item">
           <div class="ai-comp-item-title"><span class="icon" style="display:inline-flex; align-items:center; vertical-align:middle; width:22px; height:22px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> THỜI GIAN</div>
           <ul>
-            <li>Thời gian hoàn thiện: <strong>Chỉ ~ 1 ngày</strong></li>
+            <li>Thời gian hoàn thiện: <strong>~ 3 - 4 tuần</strong></li>
             <li>Có bản Draft trong 15-30 phút</li>
           </ul>
         </div>
@@ -3718,7 +3758,7 @@ scrollContainer.addEventListener('scroll', updateCarPosition, { passive: true })
     <div class="container" style="max-width: 1000px; margin: 0 auto;">
       <div class="schedule-header reveal" style="text-align: center; margin-bottom: 56px;">
         <span class="section-label">CHÂN DUNG HỌC VIÊN</span>
-        <h2 style="font-size: clamp(2rem, 5vw, 3rem); margin-top:16px; color: #fff;">Ai Phù Hợp & Ai Không Phù Hợp?</h2>
+        <h2 style="font-size: clamp(2rem, 5vw, 3rem); margin-top:16px; color: #fff;">Đối Tượng Học</h2>
       </div>
 
       <style>
@@ -4557,7 +4597,7 @@ html, body {
     <div class="container">
       <div style="text-align:center; margin-bottom:48px;" class="reveal">
         <span class="section-label">Showcase Học Viên</span>
-        <h2 style="margin-top:12px;">Những Trang Bán Hàng <span class="gold-text">Đã Launching</span></h2>
+        <h2 class="showcase-title" style="margin-top:12px;">Trang Bán Hàng<br/><span class="gold-text">Đã Launching</span></h2>
       </div>
       
       </div>
@@ -4816,7 +4856,7 @@ html, body {
 <section id="class-gallery" class="theme-cream" style="padding: 100px 0; overflow: hidden;">
   <div class="container" style="text-align: center; margin-bottom: 56px;">
     <span class="section-label">Kỷ Yếu</span>
-    <h2 style="font-size: clamp(2rem, 5vw, 3rem); margin-top:16px;">Khoảnh Khắc <span class="gold-text">Đáng Nhớ</span></h2>
+    <h2 class="gallery-title" style="font-size: clamp(2rem, 5vw, 3rem); margin-top:16px;">Khoảnh Khắc <span class="gold-text">Đáng Nhớ</span></h2>
     <p style="font-size: 1.1rem; color: var(--ink); opacity: 0.8; margin-top:16px;">Một vài khoảnh khắc từ các buổi học đã diễn ra.</p>
   </div>
 
@@ -5117,7 +5157,7 @@ html, body {
   <div class="container">
     <div class="reveal" style="text-align: center; margin-bottom: 64px;">
       <span class="section-label" >Premium Upgrade</span>
-      <h2 style="color: #FFFFFF; font-size: clamp(2rem, 4vw, 3rem);">Chiến Lược <span class="gold-text">"May Đo"</span> Cho Riêng Bạn</h2>
+      <h2 class="premium-title" style="color: #FFFFFF; font-size: clamp(2rem, 4vw, 3rem);">Chiến Lược <span class="gold-text">"May Đo"</span><br/>Cho Riêng Bạn</h2>
     </div>
     <div class="vip-grid">
     
@@ -5152,6 +5192,7 @@ html, body {
   </div>
 </section>
 
+<style>#pricing { padding-bottom: 0 !important; }</style>
 <section id="pricing" class="theme-dark">
     <div class="container">
       <div class="pricing-header reveal">
@@ -5207,7 +5248,34 @@ html, body {
 }
 </style>
 <div class="pricing-matrix-container reveal" style="overflow: hidden; margin-bottom: 40px; border-radius: 16px; border: 1px solid rgba(2, 56, 48, 0.15); box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
-  <div style="overflow-x: auto; width: 100%;">
+  
+    <style>
+      @media (max-width: 768px) {
+        .pricing-matrix-table-wrapper { display: none !important; }
+        .pricing-mobile-swiper { display: block !important; }
+        .pricing-mobile-swiper .swiper-slide { height: auto; align-self: stretch; }
+        .pricing-mobile-card { height: 100%; }
+        /* Fix the global color overrides on the dark background */
+        .pricing-mobile-card * { color: var(--navy); }
+        .pricing-mobile-card .pm-feat-name { color: rgba(2, 56, 48, 0.6) !important; }
+        .pricing-mobile-card .pm-header h3 { color: var(--navy) !important; margin-top: 16px !important; }
+        .pricing-mobile-card .pm-header div { color: rgba(2, 56, 48, 0.7) !important; }
+        .pricing-mobile-card .pm-header div[style*="font-size:1.4rem"], 
+        .pricing-mobile-card .pm-header div[style*="font-size: 1.4rem"],
+        .pricing-mobile-card .pm-header div[style*="font-size:1.6rem"], 
+        .pricing-mobile-card .pm-header div[style*="font-size: 1.6rem"] { color: var(--navy) !important; }
+        
+        /* Ensure the button text is white */
+        .pricing-mobile-card .btn-hover-fx span { color: #fff !important; }
+        
+        /* Reset table header styles inside card */
+        .pricing-mobile-card th { display: block; border: none !important; padding: 0 !important; background: transparent !important; width: 100% !important; }
+      }
+      @media (min-width: 769px) {
+        .pricing-mobile-swiper { display: none !important; }
+      }
+</style>
+<div class="pricing-matrix-table-wrapper" style="overflow-x: auto; width: 100%;">
     <table class="pricing-matrix-table" style="width: 100%; min-width: 800px; border-collapse: collapse; background: #F2EDE3; text-align: center; color: var(--navy); border-radius: 12px; font-size: 1.1rem; line-height: 1.5;">
     <thead>
       <tr style="background: rgba(2, 56, 48, 0.05);">
@@ -5216,8 +5284,9 @@ html, body {
         <th style="padding: 24px 16px; border-bottom: 1px solid rgba(2, 56, 48, 0.15); border-right: 1px solid rgba(2, 56, 48, 0.1); width: 25%; vertical-align: top;">
           <h3 style="font-family:'Beautique Display',serif; font-size:1.6rem; color:var(--navy); margin:0 0 8px;">Standard</h3>
           <div style="font-size:0.85rem; color:rgba(2, 56, 48, 0.7); margin-bottom:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Học theo nhóm</div>
-          <div style="font-size:1.4rem; font-weight:700; color:var(--navy);">6.800.000đ</div>
-          <div style="font-size:0.9rem; text-decoration:line-through; color:rgba(2, 56, 48, 0.5); margin-top:4px;">7.800.000đ</div>
+          <div style="font-size:0.9rem; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">Early Bird</div>
+          <div style="font-size:1.5rem; font-weight:700; color:var(--navy);">6.800.000đ</div>
+          <div style="font-size:1rem; color:rgba(2, 56, 48, 0.7); margin-top:6px;">Giá gốc: <span style="text-decoration:line-through;">7.800.000đ</span></div>
         </th>
         
         <th style="padding: 24px 16px; background: #B0D18A; border-bottom: 1px solid rgba(2, 56, 48, 0.15); border-right: 1px solid rgba(2, 56, 48, 0.1); border-top: 4px solid var(--navy); position: relative; width: 25%; vertical-align: top;">
@@ -5249,8 +5318,8 @@ html, body {
       </tr>
       <tr>
         <td style="padding: 16px 24px; text-align: left; background: rgba(2, 56, 48, 0.05); font-weight: 600; border-bottom: 1px solid rgba(2, 56, 48, 0.15); border-right: 1px solid rgba(2, 56, 48, 0.15);">Thời Gian Học</td>
-        <td style="padding: 16px; border-bottom: 1px solid rgba(2, 56, 48, 0.1); border-right: 1px solid rgba(2, 56, 48, 0.1);">Theo lịch khai giảng</td>
-        <td style="padding: 16px; background: #B0D18A; border-bottom: 1px solid rgba(2, 56, 48, 0.1); border-right: 1px solid rgba(2, 56, 48, 0.1);">Theo lịch khai giảng</td>
+        <td style="padding: 16px; border-bottom: 1px solid rgba(2, 56, 48, 0.1); border-right: 1px solid rgba(2, 56, 48, 0.1);">19/10 - 15/11 (K06)</td>
+        <td style="padding: 16px; background: #B0D18A; border-bottom: 1px solid rgba(2, 56, 48, 0.1); border-right: 1px solid rgba(2, 56, 48, 0.1);">19/10 - 15/11 (K06)</td>
         <td style="padding: 16px; border-bottom: 1px solid rgba(2, 56, 48, 0.1);">Ngay khi sẵn sàng</td>
       </tr>
       <tr>
@@ -5272,9 +5341,9 @@ html, body {
         <td style="padding: 16px; border-bottom: 1px solid rgba(2, 56, 48, 0.1);"><span style="font-size: 1.5rem; font-weight: 800; color: var(--navy);">✓</span></td>
       </tr>
       <tr>
-        <td style="padding: 16px 24px; text-align: left; background: rgba(2, 56, 48, 0.05); font-weight: 600; border-bottom: 1px solid rgba(2, 56, 48, 0.15); border-right: 1px solid rgba(2, 56, 48, 0.15);">Review Thành Phẩm</td>
-        <td style="padding: 16px; border-bottom: 1px solid rgba(2, 56, 48, 0.1); border-right: 1px solid rgba(2, 56, 48, 0.1);">Hot Seat nhóm</td>
-        <td style="padding: 16px; background: #B0D18A; border-bottom: 1px solid rgba(2, 56, 48, 0.1); border-right: 1px solid rgba(2, 56, 48, 0.1);">Hot Seat + 2 buổi 1:1</td>
+        <td style="padding: 16px 24px; text-align: left; background: rgba(2, 56, 48, 0.05); font-weight: 600; border-bottom: 1px solid rgba(2, 56, 48, 0.15); border-right: 1px solid rgba(2, 56, 48, 0.15);">Rà Soát & Tối Ưu</td>
+        <td style="padding: 16px; border-bottom: 1px solid rgba(2, 56, 48, 0.1); border-right: 1px solid rgba(2, 56, 48, 0.1);">Theo nhóm học</td>
+        <td style="padding: 16px; background: #B0D18A; border-bottom: 1px solid rgba(2, 56, 48, 0.1); border-right: 1px solid rgba(2, 56, 48, 0.1);">Theo nhóm học + 2 buổi 1:1</td>
         <td style="padding: 16px; border-bottom: 1px solid rgba(2, 56, 48, 0.1);">1:1 từng trạm</td>
       </tr>
       <tr>
@@ -5298,8 +5367,536 @@ html, body {
     </tbody>
   </table>
   </div>
-</div>
 
+    <!-- MOBILE PRICING CAROUSEL -->
+    <div class="pricing-mobile-swiper swiper" style="display: none; padding-bottom: 50px;">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="pricing-mobile-card" style="background: #F2EDE3; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.3); color: var(--navy);  display: flex; flex-direction: column; height: 100%;">
+            
+            <div class="pm-header" style="padding: 32px 24px 24px; text-align: center; border-bottom: 1px dashed rgba(2, 56, 48, 0.2); position: relative;">
+
+              <h3 style="font-family:'Beautique Display',serif; font-size:1.6rem; color:var(--navy); margin:0 0 8px;">Standard</h3>
+          <div style="font-size:0.85rem; color:rgba(2, 56, 48, 0.7); margin-bottom:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Học theo nhóm</div>
+          <div style="font-size:0.9rem; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">Early Bird</div>
+          <div style="font-size:1.5rem; font-weight:700; color:var(--navy);">6.800.000đ</div>
+          <div style="font-size:1rem; color:rgba(2, 56, 48, 0.7); margin-top:6px;">Giá gốc: <span style="text-decoration:line-through;">7.800.000đ</span></div>
+            </div>
+            
+            <div class="pm-body" style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column; gap: 16px;">
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Phù Hợp Với Người</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">Đã có sản phẩm,<br>thích học nhóm nhỏ<br>để giữ nhịp</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Hình Thức Học</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">Nhóm 5 người</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Thời Gian Học</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">19/10 - 15/11 (K06)</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Hoàn thành</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">4 tuần</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">3 thành phẩm<br><span style="font-weight:400; font-size:0.95rem; opacity:0.8;">(Personal Hub, Bộ<br>Quà Tặng, Sale Page)</span></div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;"><span style="font-size: 1.5rem; font-weight: 800; color: var(--navy);">✓</span></div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Được Học Lại Các<br>Khóa Standard<br><span style="font-weight:400; font-size:0.95rem; opacity:0.8;">(không giới hạn số lần)</span></div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;"><span style="font-size: 1.5rem; font-weight: 800; color: var(--navy);">✓</span></div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Rà Soát & Tối Ưu</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">Theo nhóm học</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Hỗ Trợ Sau Khóa</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">Nhóm Zalo</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Chiến lược may đo</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">–</div>
+              </div>
+
+            </div>
+            <div class="pm-footer" style="padding: 24px; background: rgba(2, 56, 48, 0.03); text-align: center; border-top: 1px solid rgba(2, 56, 48, 0.1);">
+<a href="#dang-ky" class="btn-hover-fx btn-pricing-navy cta-pulse" onclick="document.getElementById('pkg-standard').click()" style="width: 100%;"><span style="position: relative; z-index: 2;">CHỌN GÓI NÀY</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="pricing-mobile-card" style="background: var(--gold); border-radius: 24px; overflow: hidden; border: 2px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.3); color: var(--navy); transform: scale(1.02); display: flex; flex-direction: column; height: 100%;">
+            
+            <div class="pm-header" style="padding: 32px 24px 24px; text-align: center; border-bottom: 1px dashed rgba(2, 56, 48, 0.2); position: relative;">
+<div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: var(--navy); color: var(--gold); padding: 4px 16px; border-radius: 0 0 8px 8px; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;">LỰA CHỌN TỐI ƯU</div>
+              <h3 style="font-family:'Beautique Display',serif; font-size:1.8rem; color:var(--navy); margin:0 0 8px;">Premium</h3>
+          <div style="font-size:0.85rem; color:rgba(2, 56, 48, 0.8); margin-bottom:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em;">Nhóm + Kèm 1:1</div>
+          <div style="font-size:1.6rem; font-weight:700; color:var(--navy);">11.390.000đ</div>
+          <div style="font-size:0.9rem; text-decoration:line-through; color:rgba(2, 56, 48, 0.5); margin-top:4px;">12.390.000đ</div>
+            </div>
+            
+            <div class="pm-body" style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column; gap: 16px;">
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Phù Hợp Với Người</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">Có ngách đặc thù,<br>cần chiến lược may đo riêng</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Hình Thức Học</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">Nhóm + 2 buổi 1:1</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Thời Gian Học</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">19/10 - 15/11 (K06)</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Hoàn thành</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">4 tuần</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">3 thành phẩm<br><span style="font-weight:400; font-size:0.95rem; opacity:0.8;">(Personal Hub, Bộ<br>Quà Tặng, Sale Page)</span></div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;"><span style="font-size: 1.5rem; font-weight: 800; color: var(--navy);">✓</span></div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Được Học Lại Các<br>Khóa Standard<br><span style="font-weight:400; font-size:0.95rem; opacity:0.8;">(không giới hạn số lần)</span></div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;"><span style="font-size: 1.5rem; font-weight: 800; color: var(--navy);">✓</span></div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Rà Soát & Tối Ưu</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">Theo nhóm học + 2 buổi 1:1</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Hỗ Trợ Sau Khóa</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">Nhóm Zalo + Hỗ Trợ Riêng</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Chiến lược may đo</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;"><span style="font-size: 1.5rem; font-weight: 800; color: var(--navy);">✓</span></div>
+              </div>
+
+            </div>
+            <div class="pm-footer" style="padding: 24px; background: rgba(2, 56, 48, 0.03); text-align: center; border-top: 1px solid rgba(2, 56, 48, 0.1);">
+<a href="#dang-ky" class="btn-hover-fx btn-pricing-navy cta-pulse" onclick="document.getElementById('pkg-premium').click()" style="width: 100%;"><span style="position: relative; z-index: 2;">CHỌN GÓI NÀY</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="pricing-mobile-card" style="background: #F2EDE3; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.3); color: var(--navy);  display: flex; flex-direction: column; height: 100%;">
+            
+            <div class="pm-header" style="padding: 32px 24px 24px; text-align: center; border-bottom: 1px dashed rgba(2, 56, 48, 0.2); position: relative;">
+
+              <h3 style="font-family:'Beautique Display',serif; font-size:1.6rem; color:var(--navy); margin:0 0 8px;">Cấp Tốc 1:1</h3>
+          <div style="font-size:0.85rem; color:rgba(2, 56, 48, 0.7); margin-bottom:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Học riêng,<br>thời gian linh hoạt</div>
+          <div style="font-size:1.2rem; font-weight:700; color:var(--navy); margin-top: 10px;">Báo giá riêng</div>
+            </div>
+            
+            <div class="pm-body" style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column; gap: 16px;">
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Phù Hợp Với Người</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">Cần ra mắt sớm,<br>muốn có người làm<br>cùng từng bước</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Hình Thức Học</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">100% 1:1</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Thời Gian Học</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">Ngay khi sẵn sàng</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Hoàn thành</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">Theo Tiến Độ Của Bạn</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">3 thành phẩm<br><span style="font-weight:400; font-size:0.95rem; opacity:0.8;">(Personal Hub, Bộ<br>Quà Tặng, Sale Page)</span></div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;"><span style="font-size: 1.5rem; font-weight: 800; color: var(--navy);">✓</span></div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Được Học Lại Các<br>Khóa Standard<br><span style="font-weight:400; font-size:0.95rem; opacity:0.8;">(không giới hạn số lần)</span></div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;"><span style="font-size: 1.5rem; font-weight: 800; color: var(--navy);">✓</span></div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Rà Soát & Tối Ưu</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">1:1 từng trạm</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Hỗ Trợ Sau Khóa</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;">Hỗ Trợ Riêng</div>
+              </div>
+
+              <div class="pm-row" style="background: rgba(255,255,255,0.4); padding: 16px; border-radius: 12px;">
+                <div class="pm-feat-name" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(2, 56, 48, 0.6); font-weight: 700; margin-bottom: 6px;">Chiến lược may đo</div>
+                <div class="pm-feat-val" style="font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4;"><span style="font-size: 1.5rem; font-weight: 800; color: var(--navy);">✓</span></div>
+              </div>
+
+            </div>
+            <div class="pm-footer" style="padding: 24px; background: rgba(2, 56, 48, 0.03); text-align: center; border-top: 1px solid rgba(2, 56, 48, 0.1);">
+<a href="#dang-ky" class="btn-hover-fx btn-pricing-navy cta-pulse" onclick="document.getElementById('pkg-private').click()" style="width: 100%;"><span style="position: relative; z-index: 2;">CHỌN GÓI NÀY</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+<!-- END MOBILE PRICING CAROUSEL -->
+
+  
+    </div>
+
+
+      <style>
+.m-pricing-container {
+  display: none;
+  background: transparent;
+  padding: 0 16px;
+  margin: 0 0 40px;
+}
+@media (max-width: 768px) {
+  .m-pricing-container { display: block !important; }
+  .pricing-matrix-container { display: none !important; }
+  .pricing-mobile-swiper { display: none !important; }
+}
+
+.m-pricing-guarantee {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+  text-align: center;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.m-pricing-tabs {
+  display: flex;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 999px;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.m-pricing-tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.m-pricing-tab.active.tab-standard {
+  background: var(--navy);
+  color: var(--gold);
+}
+
+.m-pricing-tab.active.tab-premium {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.m-pricing-tab.active.tab-captoc {
+  background: #e2dcd0;
+  color: var(--navy);
+}
+
+.m-pricing-card {
+  display: none;
+  border-radius: 16px;
+  padding: 24px;
+  animation: fadeInTab 0.3s ease forwards;
+}
+
+@keyframes fadeInTab {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.m-pricing-card.active {
+  display: block;
+}
+
+/* Card Themes */
+.m-card-standard { border: 1px solid rgba(2,56,48,0.1); background: #F2EDE3; }
+.m-card-premium { border: none; background: #B0D18A; }
+.m-card-captoc { border: 1px solid rgba(2,56,48,0.1); background: #F2EDE3; }
+
+.m-card-subtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.m-card-standard .m-card-subtitle { color: var(--navy); }
+.m-card-premium .m-card-subtitle { color: var(--navy); }
+.m-card-captoc .m-card-subtitle { color: #666; }
+
+.m-card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--navy);
+}
+
+.m-card-price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--navy);
+}
+
+.m-card-old-price {
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: #888;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.m-card-highlight {
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+.m-card-standard .m-card-highlight { background: rgba(2,56,48,0.05); color: var(--navy); border: 1px solid rgba(2,56,48,0.2); }
+.m-card-premium .m-card-highlight { background: rgba(255,255,255,0.3); color: var(--navy); border: 1px solid rgba(2,56,48,0.15); }
+.m-card-captoc .m-card-highlight { background: #fff; color: var(--navy); border: 1px solid #ddd; }
+
+.m-highlight-label {
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+.m-highlight-text {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.m-feature-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+.m-feature-row:last-child {
+  border-bottom: none;
+  margin-bottom: 24px;
+}
+
+.m-feature-label {
+  font-size: 0.9rem;
+  color: #666;
+  flex: 0 0 40%;
+}
+.m-feature-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy);
+  flex: 0 0 60%;
+  text-align: right;
+}
+
+.m-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 24px;
+}
+.m-btn-standard { background: var(--navy); color: var(--gold); }
+.m-btn-premium { background: var(--gold); color: var(--navy); }
+.m-btn-captoc { background: #e2dcd0; color: var(--navy); }
+
+.m-compare-link {
+  text-align: center;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+</style>
+
+<div class="m-pricing-container">
+  <div class="m-pricing-guarantee">
+    Gói nào cũng có 3 thành phẩm (Personal Hub, Bộ Quà Tặng, Sale Page) và cam kết được học lại gói Standard (học theo nhóm) không giới hạn số lần.
+  </div>
+  
+  <div class="m-pricing-tabs">
+    <div class="m-pricing-tab tab-standard" onclick="switchMobileTab('standard')">Standard</div>
+    <div class="m-pricing-tab tab-premium active" onclick="switchMobileTab('premium')">Premium</div>
+    <div class="m-pricing-tab tab-captoc" onclick="switchMobileTab('captoc')">Cấp Tốc</div>
+  </div>
+  
+  <!-- Standard -->
+  <div id="m-card-standard" class="m-pricing-card m-card-standard">
+    <div class="m-card-subtitle">Nhóm Nhỏ Tối Đa 5 Người</div>
+    <div class="m-card-title">Standard</div>
+    <div style="font-size:1rem; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:0.05em; text-align:center; margin-bottom:2px;">Early Bird</div>
+    <div class="m-card-price">6.800.000đ</div>
+    <div class="m-card-old-price" style="text-decoration:none; color:rgba(2,56,48,0.7); font-size:1.1rem;">Giá gốc: <span style="text-decoration:line-through;">7.800.000đ</span></div>
+    
+    <div class="m-card-highlight">
+      <div class="m-highlight-label">Phù hợp với</div>
+      <div class="m-highlight-text">Đã có sản phẩm, thích học nhóm nhỏ để giữ nhịp</div>
+    </div>
+    
+    <div class="m-feature-row">
+      <div class="m-feature-label">Hình thức học</div>
+      <div class="m-feature-val">Nhóm 5 người</div>
+    </div>
+    <div class="m-feature-row">
+      <div class="m-feature-label">Thời gian học</div>
+      <div class="m-feature-val">19/10 - 15/11 (K06)</div>
+    </div>
+    <div class="m-feature-row">
+      <div class="m-feature-label">Hoàn thành</div>
+      <div class="m-feature-val">4 tuần</div>
+    </div>
+    <div class="m-feature-row">
+      <div class="m-feature-label">Rà Soát & Tối Ưu</div>
+      <div class="m-feature-val">Theo Nhóm Học</div>
+    </div>
+    
+    <a href="#dang-ky" class="m-btn btn-hover-fx btn-pricing-navy cta-pulse" onclick="selectPackage('standard')"><span style="position: relative; z-index: 2;">Giữ chỗ gói Standard</span></a>
+  </div>
+  
+  <!-- Premium -->
+  <div id="m-card-premium" class="m-pricing-card m-card-premium active">
+    <div class="m-card-subtitle">Nhóm + kèm 1:1 · Tối ưu nhất</div>
+    <div class="m-card-title">Premium</div>
+    <div style="font-size:1rem; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:0.05em; text-align:center; margin-bottom:2px;">Early Bird</div>
+    <div class="m-card-price">11.390.000đ</div>
+    <div class="m-card-old-price" style="text-decoration:none; color:rgba(2,56,48,0.7); font-size:1.1rem;">Giá gốc: <span style="text-decoration:line-through;">12.390.000đ</span></div>
+    
+    <div class="m-card-highlight">
+      <div class="m-highlight-label">Phù hợp với</div>
+      <div class="m-highlight-text">Có ngách đặc thù, cần chiến lược may đo riêng</div>
+    </div>
+    
+    <div class="m-feature-row">
+      <div class="m-feature-label">Hình thức học</div>
+      <div class="m-feature-val">Nhóm + 2 buổi 1:1</div>
+    </div>
+    <div class="m-feature-row">
+      <div class="m-feature-label">Thời gian học</div>
+      <div class="m-feature-val">19/10 - 15/11 (K06)</div>
+    </div>
+    <div class="m-feature-row">
+      <div class="m-feature-label">Hoàn thành</div>
+      <div class="m-feature-val">4 tuần</div>
+    </div>
+    <div class="m-feature-row">
+      <div class="m-feature-label">Rà Soát & Tối Ưu</div>
+      <div class="m-feature-val">Theo nhóm học + 2 buổi 1:1</div>
+    </div>
+    
+    <a href="#dang-ky" class="m-btn btn-hover-fx btn-pricing-gold cta-pulse" onclick="selectPackage('premium')"><span style="position: relative; z-index: 2;">Giữ chỗ gói Premium</span></a>
+  </div>
+  
+  <!-- Cấp Tốc -->
+  <div id="m-card-captoc" class="m-pricing-card m-card-captoc">
+    <div class="m-card-subtitle">Học riêng · Linh hoạt</div>
+    <div class="m-card-title">Cấp Tốc 1:1</div>
+    <div class="m-card-price" style="margin-bottom: 20px;">Báo giá riêng</div>
+    <div class="m-card-old-price" style="display:none;"></div>
+    
+    <div class="m-card-highlight">
+      <div class="m-highlight-label">Phù hợp với</div>
+      <div class="m-highlight-text">Cần ra mắt sớm, muốn có người làm cùng từng bước</div>
+    </div>
+    
+    <div class="m-feature-row">
+      <div class="m-feature-label">Hình thức học</div>
+      <div class="m-feature-val">100% 1:1</div>
+    </div>
+    <div class="m-feature-row">
+      <div class="m-feature-label">Thời gian học</div>
+      <div class="m-feature-val">Ngay khi sẵn sàng</div>
+    </div>
+    <div class="m-feature-row">
+      <div class="m-feature-label">Hoàn thành</div>
+      <div class="m-feature-val">Theo tiến độ của bạn</div>
+    </div>
+    <div class="m-feature-row">
+      <div class="m-feature-label">Rà Soát & Tối Ưu</div>
+      <div class="m-feature-val">Theo tiến độ</div>
+    </div>
+    
+    <a href="#dang-ky" class="m-btn btn-hover-fx btn-pricing-navy cta-pulse" onclick="selectPackage('captoc')"><span style="position: relative; z-index: 2;">Nhận tư vấn riêng</span></a>
+  </div>
+
+      <div class="faq-item" style="margin-top: 24px; border-radius: 8px;">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')" role="button" style="padding: 16px 20px;">
+      <h3 style="margin:0; font-size: 1.05rem; font-family: 'EB Garamond', serif; font-weight: 700;">So sánh chi tiết cả 3 gói</h3>
+      <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </div>
+    <div class="faq-a" role="region">
+      <div class="faq-a-inner" style="font-size: 1rem; color: rgba(255,255,255,0.85); line-height: 1.6; padding: 0 20px 20px;">
+        <p style="margin-bottom: 12px; font-weight: 600;">Gói nào cũng có 3 thành phẩm và cam kết được học lại gói Standard (học theo nhóm) không giới hạn.</p>
+        <p style="margin-bottom: 8px;">Ba gói khác nhau ở mức đồng hành:</p>
+        <ul style="margin: 0; padding-left: 20px; list-style-type: disc; display: flex; flex-direction: column; gap: 8px;">
+          <li><strong>Standard:</strong> học cùng nhóm 5 người, theo lịch cả lớp.</li>
+          <li><strong>Premium:</strong> như Standard, thêm 2 buổi 1:1 để rà soát riêng thành phẩm của bạn.</li>
+          <li><strong>Cấp Tốc:</strong> học riêng 100%, bắt đầu ngay và làm cùng bạn từng bước theo tiến độ của bạn.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function switchMobileTab(tab) {
+  // Reset tabs
+  document.querySelectorAll('.m-pricing-tab').forEach(el => el.classList.remove('active'));
+  document.querySelector('.tab-' + tab).classList.add('active');
+  
+  // Reset cards
+  document.querySelectorAll('.m-pricing-card').forEach(el => el.classList.remove('active'));
+  document.getElementById('m-card-' + tab).classList.add('active');
+}
+</script>
 
       <!-- REGISTRATION HERO SECTION -->
       <div class="reg-hero reveal" id="dang-ky">
@@ -5339,7 +5936,7 @@ html, body {
 
             <!-- Main form view -->
             <div id="reg-form-view">
-              <h3 style="font-family:'Beautique Display',serif; font-size:1.8rem; color:#fff; margin:0 0 8px; line-height:1.3; text-align: center;">Đã Đến Lúc Hệ Thống Hóa<br/>Sự Nghiệp Của Bạn</h3>
+              <h3 style="font-family:'Beautique Display',serif; font-size:1.8rem; color:#fff; margin:0 0 8px; line-height:1.3; text-align: center;">Đã Đến Lúc<br/>Hệ Thống Hóa<br/>Sự Nghiệp Của Bạn</h3>
               <p style="font-size:1.1rem; color:var(--gold); margin-bottom:24px; font-weight:600; text-align: center;">Đăng ký trước, chọn lịch sau. Lịch học do cả lớp cùng chọn.</p>
               
 
@@ -5475,7 +6072,10 @@ html, body {
         </div>
       </div>
     </div>
-  </section>
+  
+
+
+</section>
 
 <section id="bonus" class="theme-cream" style="padding: 80px 24px; position: relative; z-index: 1;">
     <style>
@@ -5554,7 +6154,7 @@ html, body {
     <div class="container" style="max-width: 1200px;">
       <div style="text-align:center; margin-bottom: 56px;" class="reveal">
         <span class="section-label">QUÀ TẶNG KÈM</span>
-        <h2 style="font-family: 'Beautique Display', serif; font-size: clamp(2rem, 5vw, 3rem); color: var(--ink); margin-top: 12px;">Nhận Ngay Trọn Bộ Trang Bị Founder's North</h2>
+        <h2 style="font-family: 'Beautique Display', serif; font-size: clamp(1.5rem, 4.5vw, 3rem); color: var(--ink); margin-top: 12px;">Nhận Trọn Bộ Trang Bị Founder's North</h2>
       </div>
       
       <div class="bonus-grid reveal">
@@ -5605,7 +6205,10 @@ html, body {
             <h3 class="bonus-title">Cẩm nang các hiệu ứng hay ho cho Landing Page</h3>
             <p class="bonus-desc">Làm cho trang web của bạn trở nên sống động, thu hút và giữ chân khách hàng lâu hơn.</p>
           </div>
-        </div></div>
+                </div></div>
+      </div>
+      <div style="margin-top: 56px; padding-bottom: 24px; text-align: center; position: relative; z-index: 10;">
+        <a href="#dang-ky" class="btn-hover-fx btn-pricing-navy cta-pulse" style="display:inline-block; padding: 18px 48px; border-radius: 50px !important; font-size: 1.15rem; font-weight: 800; white-space: nowrap; text-decoration: none; color: #fff; box-shadow: 0 10px 30px rgba(2, 56, 48, 0.2);"><span style="position: relative; z-index: 2;">Tôi Sẵn Sàng Tham Gia Focus Camp</span></a>
       </div>
     </div>
   </section>
@@ -5657,7 +6260,7 @@ html, body {
           </div>
           <div class="faq-a" id="faq8-a" role="region">
             <div class="faq-a-inner">
-              Bạn sẽ nhận được bộ công cụ "Click &amp; Clone" - Sao chép nguyên vẹn hệ thống phễu chỉ bằng 1 cú click chuột, kết hợp với AI Vibe-coding để ra lệnh cho máy tính làm thay.
+              Bạn có thể gõ máy tính và nhắn tin (chat) với ai đó được chứ? Bạn làm được điều này thì bạn đủ điều kiện tham gia Focus Camp. Kỹ thuật dùng AI cực kỳ đơn giản, bạn không cần biết code, không cần biết design, không cần giỏi content, vẫn hoàn toàn tự tay xây dựng trang ngay trong khóa học.
             </div>
           </div>
         </div>
@@ -6393,6 +6996,22 @@ html, body {
           navigation: {
             nextEl: ".story-swiper .swiper-button-next",
             prevEl: ".story-swiper .swiper-button-prev",
+          },
+        });
+      }
+    });
+  </script>
+  <!-- Pricing Mobile Swiper Init -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof Swiper !== 'undefined') {
+        new Swiper(".pricing-mobile-swiper", {
+          slidesPerView: 1.1,
+          spaceBetween: 16,
+          centeredSlides: true,
+          pagination: {
+            el: ".pricing-mobile-swiper .swiper-pagination",
+            clickable: true,
           },
         });
       }
