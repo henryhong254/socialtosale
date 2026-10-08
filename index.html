@@ -22,6 +22,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
   <style>
+    .payment-spinner { display: inline-block; width: 28px; height: 28px; border: 3px solid rgba(200,222,49,0.2); border-top-color: var(--gold); border-radius: 50%; animation: payment-spin 1s linear infinite; margin-bottom: 8px; }
+    @keyframes payment-spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .payment-spinner { animation: none; } }
 
 html, body {
   max-width: 100vw !important;
@@ -6049,8 +6052,12 @@ html, body {
                 <p style="font-size:0.88rem; color:var(--gold-light); font-weight:600; margin:0;">⚠️ Sau khi chuyển khoản xong, vui lòng <u>giữ nguyên trang này</u> để hệ thống tự xác nhận thanh toán cho bạn.</p>
               </div>
               <div id="payment-countdown-wrap" style="margin-top:16px;">
-                <p style="font-size:0.88rem; color:rgba(255,255,255,0.7); margin-bottom:4px;">Đang chờ xác nhận thanh toán…</p>
-                <p id="payment-countdown" style="font-family:'Beautique Display',serif; font-size:1.6rem; font-weight:700; color:var(--gold); letter-spacing:0.05em;">15:00</p>
+                <div id="payment-loading" role="status" aria-live="polite">
+                  <span class="payment-spinner" aria-hidden="true"></span>
+                  <p style="font-size:1rem; color:var(--gold); font-weight:700;">Đang chờ xác nhận thanh toán…</p>
+                  <p style="font-size:0.92rem; line-height:1.7; color:rgba(255,255,255,0.85); margin-top:6px;">Chuyển khoản xong rồi? Pha một ly cà phê hoặc trà nhé ☕<br>Giữ trang này mở, chúng mình sẽ báo ngay khi thanh toán được xác nhận — hành trình Social To Sale sắp bắt đầu!</p>
+                </div>
+                <span id="payment-countdown" hidden aria-hidden="true"></span>
                 <p id="payment-timeout-msg" style="display:none; font-size:0.88rem; color:#e57373; margin-top:8px;">Hết thời gian chờ. Nếu đã chuyển khoản, vui lòng nhắn tin cho Ý để được hỗ trợ.</p>
               </div>
             </div>
@@ -6059,8 +6066,7 @@ html, body {
             <div id="checkout-success-view" class="form-success" style="display:none;">
               <span class="success-icon">✅</span>
               <h3 style="color:var(--gold);">Thanh Toán Thành Công!</h3>
-              <p style="margin-top:12px; line-height:1.8;">Email xác nhận đã được gửi về <strong id="confirmed-email-display" style="color:var(--gold-light);"></strong></p>
-              <p style="margin-top:8px; line-height:1.8; font-size:0.9rem; color:rgba(255,255,255,0.8);">Vui lòng kiểm tra email — có thể nằm trong thư mục <strong>spam (thư rác)</strong> hoặc <strong>promotion (thư quảng cáo)</strong> nếu chưa thấy trong hộp thư chính.</p>
+              <p style="margin-top:12px; line-height:1.8;">Chào mừng bạn đến với Social To Sale! 🎉<br>Mọi thông tin và hỗ trợ của lớp sẽ được cập nhật trong nhóm Zalo.</p>
               <div style="margin-top:20px; padding:20px 18px; background:rgba(200,222,49,0.12); border:2px solid var(--gold); border-radius:14px; box-shadow:0 0 24px rgba(200,222,49,0.25);">
                 <p style="margin:0 0 6px; font-size:1.05rem; font-weight:700; color:var(--gold);">📌 Bước tiếp theo: vào nhóm Zalo của lớp để chọn lịch học</p>
                 <p style="margin:0 0 14px; font-size:0.92rem; line-height:1.6; color:rgba(255,255,255,0.85);">Bấm vào link bên dưới để tham gia nhóm. Cả lớp sẽ cùng chọn khung giờ phù hợp cho 3 buổi Online + 3 buổi Offline (khóa K06: 19/10 – 15/11).</p>
@@ -6567,7 +6573,7 @@ html, body {
               document.getElementById('order-code-display').textContent = code;
               document.getElementById('payment-qr').src =
                 'https://qr.sepay.vn/img?acc=0362722725&bank=MBBank&amount=' + amount + '&des=' + encodeURIComponent(code);
-              startPaymentWatcher(code, email);
+              startPaymentWatcher(code);
             } else {
               document.getElementById('reg-success-view').innerHTML = '<span class="success-icon">🎉</span><h3 style="color:var(--gold);">Đã Ghi Nhận Yêu Cầu!</h3><p style="margin-top:12px; line-height:1.6; color:rgba(255,255,255,0.9);">Cảm ơn bạn đã quan tâm đến Gói Cấp Tốc 1:1. Ý sẽ liên hệ trực tiếp với bạn qua Zalo hoặc Số điện thoại trong thời gian sớm nhất để tư vấn và báo giá chi tiết nhé.</p>';
             }
@@ -6579,7 +6585,7 @@ html, body {
           });
       });
 
-      function startPaymentWatcher(code, email) {
+      function startPaymentWatcher(code) {
         const TOTAL = 15 * 60; // 15 minutes in seconds
         let remaining = TOTAL;
         let pollInterval, countdownInterval;
@@ -6601,7 +6607,6 @@ html, body {
         function showCheckoutSuccess() {
           stopAll();
           document.getElementById('reg-success-view').style.display = 'none';
-          document.getElementById('confirmed-email-display').textContent = email;
           document.getElementById('checkout-success-view').style.display = '';
         }
 
@@ -6615,6 +6620,8 @@ html, body {
         }
 
         // Start countdown
+        document.getElementById('payment-loading').style.display = '';
+        timeoutMsgEl.style.display = 'none';
         countdownEl.textContent = formatTime(remaining);
         countdownInterval = setInterval(function () {
           remaining--;
@@ -6622,6 +6629,7 @@ html, body {
           if (remaining <= 0) {
             stopAll();
             countdownEl.style.display = 'none';
+            document.getElementById('payment-loading').style.display = 'none';
             timeoutMsgEl.style.display = 'block';
           }
         }, 1000);
